@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html lang="IT">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Italia ed Europa a confronto</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+	<script src="./script.js"></script>
+</head>
+
+<body class = "europa">
+    <section>
+        <ul id="navbar"> 
+            <li class="navelement"> <a href="./sito.html">Dati e metodologia</a></li>
+            <li class="navelement"> <a href= "./italia.html">La situazione in Italia</a></li>
+            <li class="navelement"> <a href="./europa.html" class="activeS">Italia ed Europa a confronto</a></li>
+            <li class="navelement"> <a href="./nel_tempo.html">L'Italia nel tempo</a></li>
+            <li class="navelement"> <a href="#footer">About</a></li>
+        </ul>
+        </section>
+    
+        <div class="mobile-container">
+            <div class="topnav">
+                <a href="#" class="active">Italia ed Europa a confronto</a>
+                <div id="myLinks">
+                    <a href="./sito.html">Dati e metodologia</a>
+                    <a href="./italia.html">La situazione in Italia</a>
+                    <a href="./nel_tempo.html">L'Italia nel tempo</a>
+                    <a href="#footer">About</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+
+        <header>
+            <div>
+            <h1>Italia ed Europa a confronto</h1>
+            <p>Qual è la situazione italiana rispetto a quella di altri Paesi europei? Quali sono le principali cause di decesso negli altri Paesi europei tra i giovani?</p>
+            </div>
+            <button class = "buttonIT" onclick="scrollToSection('#sezione1')">Esplora l'indagine<span class="arrow">&#9660;</span></button>
+            <img src = " "></img>
+        </header>
+
+        <section id = "cause_decessi_spagna">
+            <h2>Le cause principali dei decessi tra i giovani in Spagna e in Italia - <br/>anno 2015</h2>
+            <p>Nel <b>2015</b>, le statistiche evidenziano notevoli differenze tra le principali cause di decesso dei giovani in Spagna e Italia. <br/><br/>
+                In <b>Italia</b>, come abbiamo potuto vedere, gli <b>incidenti stradali</b> sono emersi come la principale causa di morte. Questo dato indica una preoccupante situazione in merito alla sicurezza stradale e alla guida responsabile nella nazione.<br/><br/>
+                In <b>Spagna</b>, invece, nel 2015 la causa principale di decesso tra i giovani sono stati i <b>tumori</b>. Con un numero di vittime superiore a qualsiasi altra causa, questi dati rivelano una sfida significativa per la salute pubblica in Spagna e richiedono un approccio più ampio per comprendere e affrontare il problema.<br/><br/>
+                I dati mostrano anche come al secondo posto tra le principali cause di morte dei giovani spagnoli nel 2015 si trovino il suicidio e l'autolesionismo e solo al terzo posto compaiano gli incidenti stradali.
+            </p>
+           <div class="grid-containerS2">
+                <img class = "grid-itemS2" src = "./grafici/Spagna2015.svg">
+                <img class = "grid-itemS2" src = "./grafici/Italia2015.svg">
+           </div>     
+        </section>
+
+        <section id = "cause_decessi_spagna2">
+            <h2>Le cause principali di decesso tra i giovani in Spagna e in Italia - <br/>anno 2020</h2>
+            <p>Nel <b>2020</b> i dati segnalano alcune <b>variazioni rispetto al 2015, dovuta principalmente agli effetti della pandemia da Covid-19</b><br/><br/>
+            In <b>Italia</b>, gli <b>incidenti stradali</b> hanno continuato a essere la prima causa di morte tra i giovani, ma si è verificato un calo.<br/><br/>
+            In <b>Spagna</b>, nello stesso anno, gli incidenti stradali sono ancora al terzo posto, preceduti da tumori, suicidi e autolesionismo.<br/><br/>
+            Interessante a tal proposito notare come il Covid-19 non compaia affatto tra le cause principali di decesso nei giovani, né in Italia né in Spagna: ciò è ovviamente dovuto al fatto che i giovani possiedono un sistema immunitario naturalmente più forte rispetto al resto della popolazione più adulta.<br/<br/> 
+            </p>
+           <div class="grid-containerS3">
+                <img class = "grid-itemS3" id="ciao" src = "./grafici/Spagna2020.svg">
+                <img class = "grid-itemS3" src = "./grafici/Italia2020.svg">
+           </div> 
+        </section>
+
+        <section id = "cause_decessi_spagna3">
+            <h2>Incidenti stradali mortali tra i giovani - un confronto tra Italia e Spagna</h2>
+            <img class = "grid-itemS1" src = "./grafici/IncidentiSp2020.svg" style = "width:70%; margin-left: 15%; margin-top: 2%;"> 
+            <p>Come dimostrano i dati, nel 2020 in Italia e in Spagna si è assistito a un calo generale delle morti tra giovani causate da incidenti stradali.<br/><br/>
+               Le differenze tra i due Paesi sono comunque notevoli, analizziamole nel dettaglio:
+                <ul>
+                    <li>Nel 2015:</li>
+                    <ul>
+                        <li>In Italia i giovani che hanno perso la vita in incidenti stradali sono stati circa <b>900</b></li>
+                        <li>In Spagna i giovani che hanno perso la vita in incidenti stradali sono stati circa <b>400</b></li><br/>
+                    </ul>
+                    <li>Nel 2020:</li>
+                    <ul>
+                        <li>In Italia i giovani che hanno perso la vita in incidenti stradali sono stati circa <b>600</b></li>
+                        <li>In Spagna i giovani che hanno perso la vita in incidenti stradali sono stati circa <b>300</b></li>
+                    </ul>
+                </ul>
+                Considerando le differenze relative al numero di abitanti delle due nazioni (59 milioni di abitanti circa in Italia e 47 milioni di abitanti circa in Spagna), in media in Italia i giovani morti a causa di incidenti stradali sono stati:
+                <ul>
+                    <li>Il <span class="highlight">47%</span> in più nel 2015</li>
+                    <li>Il <span class="highlight">38%</span> in più nel 2020</li>
+                </ul> 
+            </p><br/>
+            <h3>Attenzione però:</h3>
+            <p>I dati più recenti provenienti dalla Spagna, aggiornati al 2022, in tema di morti correlate a incidenti stradali tra i più giovani sono a dir poco allarmanti: come mostra il grafico sottostante, in tempi recenti si è registrata una vera impennata.</p>
+            <img src = "./grafici/IncidentiSp2022.svg" style = "width:70%; margin-left: 15%; margin-top: 2%;">
+          
+           <p>In breve tempo, la Spagna è passata infatti da una media di 360 giovani morti l'anno a 1060 morti sono nel 2022: un aumento del <span class="highlight">167%</span></p>
+        </section>
+
+        <section id = "cause_decessi_spagna4">
+            <h2>Morti correlate all'abuso di alcol tra i giovani in Spagna - dal 2015 al 2022</h2>
+            <p><b>Dal 2015 al 2022</b> in Spagna le morti tra i giovani correlate ad abuso di alcol hanno registrati tassi molto bassi, con un massimo di 5 morti registrati nel 2022.</p>
+            <img src = "./grafici/AlcolSpagna.svg" style = "width:40%; margin-left: 30%;">
+            <p>Da un'analisi più approfondita, emerge come gli uomini siano più soggetti a incidenti di questo genere:
+            <img src = "./grafici/AlcolSpagna2.svg" style = "width:32%; margin-left: 32%; margin-top: 6%;"/>
+           </p>
+        </section>
+
+        <section id = "cause_decessi_spagna5">
+            <h2>Morti correlate all'abuso di droghe e psicofarmaci tra i giovani in Spagna - dal 2015 al 2022</h2>
+            <img class = "grid-item0" src = "./grafici/DrogheSpagna.svg" style = "width:90%; margin-left: 5%; margin-top: 2%;">
+            <p><b>Dal 2015 al 2022</b> in Spagna le morti tra i giovani correlate ad abuso di droghe e psicofarmaci hanno registrato tassi sempre bassi.<br/>
+                Rispetto alle morti alcol-correlate, tuttavia, droghe e psicofarmaci hanno causato un numero di morti più elevato, arrivando a coinvolgere anche persone della fascia d'età più bassa, dai 15 ai 19 anni.
+            </p>
+        </section>
+    
+
+
+        <footer id="footer" class="grid-container">
+            <div class = "grid-item">
+                <p>Data Journalism, Università di Pisa<br> 
+                Laurea Magistrale in Informatica Umanistica<br>
+                Anno Accademico 2022/2023<br>
+                <br>Sofia Capone<br>Arianna Di Serio
+                </p>
+            </div>
+            <div class= "grid-item">
+                <h3>Fonti</h3>
+                <p>
+                    <a href="https://m4.ti.ch/fileadmin/DECS/DS/Rivista_scuola_ticinese/ST_n.274/ST_274_Gianinazzi_Quaglia_Inderwildi_Bonivento_Lo_stress.pdf">Gianinazzi, Andrea. Quaglia, Jacqueline. Inderwildi Bonivento, Laura. <i>Lo stress: un fattore di rischio tra i giovani</i></a><br/>
+                    <a href="https://www.humanitas.it/news/sintomi-dello-stress/#:~:text=Uno%20stress%20intenso%2C%20duraturo%20o,sintomi%20o%20patologie%20gi%C3%A0%20presenti">Humanitas | Sintomi dello stress</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href="https://www.humanitas.it/news/sonno-perche-e-importante-dormire-bene/#:~:text=I%20disturbi%20del%20sonno%2C%20infatti,problematiche%20di%20salute%20pi%C3%B9%20severe">Humanitas | Sonno: perché è importante dormire bene</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href="https://www.istat.it/">ISTAT</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href="https://www.epicentro.iss.it/alcol/epidemiologia-monitoraggio-2020">Istituto Superiore di Sanità | Alcol, epidemiologia e monitoraggio 2020</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href="https://www.epicentro.iss.it/alcol/alcol_ebp">Istituto Superiore di Sanità | Alcol, guida, sicurezza e salute</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href = "https://www.epicentro.iss.it/alcol_fetale/consumi-alcolici-donne">Istituto Superiore di Sanità | Consumo alcolici tra la popolazione femminile</a>. <i>Consultato il 22/07/2023</i><br/>
+                    <a href="https://www.epicentro.iss.it/ben/2021/3/fumo-alcol-adolescenti-hbsc">Istituto Superiore di Sanità | Fumo e alcol tra gli adolescenti</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href= "https://www.epicentro.iss.it/stradale/#:~:text=La%20grande%20maggioranza%20degli%20incidenti,di%20alcol%20e%20sostanze%20stupefacenti">Istituto Superiore di Sanità | Incidenti stradali</a>. <i>Consultato il 22/07/2023</i><br/>
+                    <a href="https://www.epicentro.iss.it/piano_prevenzione/obesita">Istituto Superiore di Sanità | Sorveglianza e prevenzione dell'obesità</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href = "https://www.salute.gov.it/portale/alcol/dettaglioNotizieAlcol.jsp?lingua=italiano&menu=notizie&p=dalministero&id=5478">Ministero della Salute | Alchol Prevention Day</a>. <i>Consultato il 10/07/2023</i>. </br>
+                    <a href = "https://www.salute.gov.it/portale/donna/dettaglioContenutiDonna.jsp?lingua=italiano&id=2350&area=Salute+donna&menu=prevenzione">Ministero della Salute | Salute della donna</a>. <i>Consultato il 22/07/2023</i><br/>
+                    <a href="https://www.politicheantidroga.gov.it/it/attivita/attivita-e-progetti/le-pubblicazioni/cervello-mente-e-droghe/ ">Politiche antidroga.</a><i> Consultato il 10/07/2023</i>.
+                    
+                </p>
+            </div>
+        </footer>
+</body>
+</html>

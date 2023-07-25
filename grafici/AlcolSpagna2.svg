@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 376 310" style="enable-background:new 0 0 376 310;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:none;}
+	.st2{fill:#4C78A8;}
+	.st3{fill:#F58518;}
+	.st4{font-family:'Helvetica';}
+	.st5{font-size:10px;}
+	.st6{display:none;}
+	.st7{font-family:'Helvetica-Bold';}
+	.st8{font-size:11px;}
+	.st9{font-family:'MyriadPro-Regular';}
+	.st10{font-size:16px;}
+</style>
+<rect class="st0" width="376" height="310"/>
+<g transform="translate(5,5)">
+	<g>
+		<g transform="translate(0,0)">
+			<path class="st1" d="M0,0h300v300H0V0z"/>
+			<g>
+				<g>
+					<path class="st2" d="M292.7,103.6C272.6,41.8,215,0,150,0v150L292.7,103.6z"/>
+					<path class="st3" d="M150,0C67.2,0,0,67.2,0,150c0,82.8,67.2,150,150,150s150-67.2,150-150c0-15.7-2.5-31.4-7.3-46.4L150,150V0
+						z"/>
+				</g>
+				<g>
+					<g transform="translate(318,0)">
+						<path pointer-events="none" class="st1" d="M0,0h48v40H0V0z"/>
+						<g>
+							<g>
+								<g transform="translate(0,16)">
+									<path pointer-events="none" class="st1" d="M0,0L0,0L0,0L0,0z"/>
+									<g>
+										<g>
+											<g transform="translate(0,0)">
+												<path pointer-events="none" class="st1" d="M0,0h47.1v11H0V0z"/>
+												<g>
+													<g pointer-events="none">
+														<path class="st2" d="M11,6c0,2.8-2.2,5-5,5S1,8.8,1,6s2.2-5,5-5S11,3.2,11,6"/>
+													</g>
+													<g pointer-events="none">
+														<text transform="matrix(1 0 0 1 16 9)" class="st4 st5">Donne</text>
+													</g>
+												</g>
+												<path pointer-events="none" class="st6" d="M0,0"/>
+											</g>
+											<g transform="translate(0,13)">
+												<path pointer-events="none" class="st1" d="M0,0h47.1v11H0V0z"/>
+												<g>
+													<g pointer-events="none">
+														<path class="st3" d="M11,6c0,2.8-2.2,5-5,5S1,8.8,1,6s2.2-5,5-5S11,3.2,11,6"/>
+													</g>
+													<g pointer-events="none">
+														<text transform="matrix(1 0 0 1 16 9)" class="st4 st5">Uomini</text>
+													</g>
+												</g>
+												<path pointer-events="none" class="st6" d="M0,0"/>
+											</g>
+										</g>
+									</g>
+									<path pointer-events="none" class="st6" d="M0,0"/>
+								</g>
+							</g>
+							<g pointer-events="none">
+								<text transform="matrix(1 0 0 1 0 9)" class="st7 st8">Sesso</text>
+							</g>
+						</g>
+						<path pointer-events="none" class="st6" d="M0,0"/>
+					</g>
+				</g>
+			</g>
+			<path class="st6" d="M0,0"/>
+		</g>
+	</g>
+</g>
+<rect x="291" y="56" class="st1" width="43" height="33"/>
+<text transform="matrix(1 0 0 1 291 67.3599)" class="st9 st10">25%</text>
+<rect x="291" y="255.7" class="st1" width="43" height="33"/>
+<text transform="matrix(1 0 0 1 291 267.0503)" class="st9 st10">75%</text>
+</svg>

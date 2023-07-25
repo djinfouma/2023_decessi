@@ -1,0 +1,404 @@
+<!DOCTYPE HTML>
+<html lang="IT">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>La situazione in Italia</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+	<script src="./script.js"></script>
+</head>
+
+<body>
+    <section>
+        <ul id="navbar"> 
+            <li class="navelement"> <a href="./sito.html">Dati e metodologia</a></li>
+            <li class="navelement"> <a href= "./italia.html" class="activeS">La situazione in Italia</a></li>
+            <li class="navelement"> <a href="./europa.html">Italia ed Europa a confronto</a></li>
+            <li class="navelement"> <a href="./nel_tempo.html">L'Italia nel tempo</a></li>
+            <li class="navelement"> <a href="#footer">About</a></li>
+        </ul>
+        </section>
+    
+        <div class="mobile-container">
+            <div class="topnav">
+                <a href="#" class="active">La situazione in Italia</a>
+                <div id="myLinks">
+                    <a href="./sito.html">Dati e metodologia</a>
+                    <a href="./europa.html">Italia ed Europa a confronto</a>
+                    <a href="./nel_tempo.html">L'Italia nel tempo</a>
+                    <a href="#footer">About</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+
+        <header id ="headerIT">
+            <div>
+            <h1 style = "font-size: 36px;">La situazione attuale in Italia</h1>
+            <p>Quali sono le principali cause di decesso dei giovani in Italia? Quali sono i fattori che influenzano maggiormente la loro salute?</p>
+            </div>
+            <button class = "buttonIT" onclick="scrollToSection('#cause_d')">Esplora l'indagine<span class="arrow">&#9660;</span></button>
+            <img src = ""></img>
+        </header>
+
+        <section id = "cause_d">
+            <h2>Le principali cause di decesso</h2>
+            <p>Nel 2020 diverse cause hanno contribuito ai decessi dei giovani. Tra queste, gli incidenti di trasporto si collocano al primo posto, seguiti da tumori, suicidi, malattie del sistema nervoso e degli organi di senso, leucemia e malattie del cuore.
+            </p>
+            <div id="vis00"></div>
+                <script>
+                    (function(vegaEmbed) {
+                    var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"grid": false, "labelFontSize": 12, "titleFontSize": 14}, "facet": {"spacing": 10}, "title": {"fontSize": 18, "offset": 30}}, "data": {"name": "data-52b9c2d920aa365054e3bbdface2199a"}, "mark": {"type": "bar"}, "encoding": {"color": {"condition": {"test": "(((datum.DescrizioneCausa === 'Accidenti di trasporto') || (datum.DescrizioneCausa === 'Tumori (tutti i tipi)')) || (datum.DescrizioneCausa === 'Suicidio e autolesione intenzionale'))", "value": "#206792"}, "value": "lightgrey"}, "tooltip": [{"field": "Decessi 2020", "title": "Totale decessi 2020", "type": "quantitative"}], "x": {"axis": {"labelAngle": 90}, "field": "DescrizioneCausa", "sort": "-y", "title": "", "type": "nominal"}, "y": {"field": "Decessi 2020", "title": "", "type": "quantitative"}}, "height": 400, "title": "Cause decessi giovani nel 2020", "width": 1200, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-52b9c2d920aa365054e3bbdface2199a": [{"DescrizioneCausa": "AIDS", "Decessi 2020": 24}, {"DescrizioneCausa": "Abuso di alcool (compresa psicosi alcolica)", "Decessi 2020": 4}, {"DescrizioneCausa": "Accidenti di trasporto", "Decessi 2020": 586}, {"DescrizioneCausa": "Alcune condizioni morbose che hanno origine nel periodo perinatale", "Decessi 2020": 12}, {"DescrizioneCausa": "Altre cause esterne di traumatismo e avvelenamento", "Decessi 2020": 5}, {"DescrizioneCausa": "Altre malattie apparato digerente", "Decessi 2020": 23}, {"DescrizioneCausa": "Altre malattie croniche delle basse vie respiratorie", "Decessi 2020": 6}, {"DescrizioneCausa": "Altre malattie del cuore", "Decessi 2020": 114}, {"DescrizioneCausa": "Altre malattie del sistema circolatorio", "Decessi 2020": 67}, {"DescrizioneCausa": "Altre malattie del sistema nervoso e degli organi di senso", "Decessi 2020": 185}, {"DescrizioneCausa": "Altre malattie del sistema osteomuscolare e del tessuto connettivo", "Decessi 2020": 18}, {"DescrizioneCausa": "Altre malattie del sistema respiratorio", "Decessi 2020": 56}, {"DescrizioneCausa": "Altre malattie dell'apparato digerente", "Decessi 2020": 27}, {"DescrizioneCausa": "Altre malattie endocrine, nutrizionali e metaboliche", "Decessi 2020": 57}, {"DescrizioneCausa": "Altre malattie infettive e parassitarie", "Decessi 2020": 38}, {"DescrizioneCausa": "Altre malattie ischemiche del cuore", "Decessi 2020": 9}, {"DescrizioneCausa": "Altri Tumori maligni", "Decessi 2020": 93}, {"DescrizioneCausa": "Altri accidenti", "Decessi 2020": 146}, {"DescrizioneCausa": "Altri disturbi psichici e comportamentali", "Decessi 2020": 22}, {"DescrizioneCausa": "Altri sintomi, segni, risultati anomali e cause mal definite", "Decessi 2020": 38}, {"DescrizioneCausa": "Annegamento e sommersione accidentali", "Decessi 2020": 63}, {"DescrizioneCausa": "Arresto cardiaco", "Decessi 2020": 2}, {"DescrizioneCausa": "Asma", "Decessi 2020": 11}, {"DescrizioneCausa": "Avvelenamento accidentale", "Decessi 2020": 81}, {"DescrizioneCausa": "Cadute accidentali", "Decessi 2020": 79}, {"DescrizioneCausa": "Cause sconosciute e non specificate", "Decessi 2020": 316}, {"DescrizioneCausa": "Cirrosi, fibrosi ed epatite cronica", "Decessi 2020": 17}, {"DescrizioneCausa": "Complicazioni della gravidanza, del parto e del puerperio", "Decessi 2020": 6}, {"DescrizioneCausa": "Covid-19", "Decessi 2020": 81}, {"DescrizioneCausa": "Demenza", "Decessi 2020": 0}, {"DescrizioneCausa": "Diabete mellito", "Decessi 2020": 18}, {"DescrizioneCausa": "Dipendenza da droghe, tossicomania", "Decessi 2020": 25}, {"DescrizioneCausa": "Epatite virale", "Decessi 2020": 4}, {"DescrizioneCausa": "Eventi di intento indeterminato", "Decessi 2020": 3}, {"DescrizioneCausa": "Infarto miocardico acuto", "Decessi 2020": 24}, {"DescrizioneCausa": "Influenza", "Decessi 2020": 1}, {"DescrizioneCausa": "Leucemia", "Decessi 2020": 89}, {"DescrizioneCausa": "Malattie cerebrovascolari", "Decessi 2020": 69}, {"DescrizioneCausa": "Malattie del rene e uretere", "Decessi 2020": 7}, {"DescrizioneCausa": "Malattie del sangue e degli organi ematopoietici ed alcuni disturbi del sistema immunitario", "Decessi 2020": 25}, {"DescrizioneCausa": "Malattie della cute e del tessuto sottocutaneo", "Decessi 2020": 4}, {"DescrizioneCausa": "Malattie polmonari interstiziali non specificate", "Decessi 2020": 6}, {"DescrizioneCausa": "Malformazioni congenite ed anomalie cromosomiche", "Decessi 2020": 77}, {"DescrizioneCausa": "Melanomi maligni della cute", "Decessi 2020": 31}, {"DescrizioneCausa": "Morbo di Hodgkin e Linfomi", "Decessi 2020": 53}, {"DescrizioneCausa": "Omicidio, aggressione", "Decessi 2020": 40}, {"DescrizioneCausa": "Polmonite", "Decessi 2020": 19}, {"DescrizioneCausa": "Suicidio e autolesione intenzionale", "Decessi 2020": 465}, {"DescrizioneCausa": "Tubercolosi", "Decessi 2020": 10}, {"DescrizioneCausa": "Tumori (tutti i tipi)", "Decessi 2020": 493}]}};
+                    var embedOpt = {"mode": "vega-lite"};
+
+                    function showError(el, error){
+                        el.innerHTML = ('<div style="color:red;">'
+                                        + '<p>JavaScript Error: ' + error.message + '</p>'
+                                        + "<p>This usually means there's a typo in your chart specification. "
+                                        + "See the javascript console for the full traceback.</p>"
+                                        + '</div>');
+                        throw error;
+                    }
+                    const el = document.getElementById('vis');
+                    vegaEmbed("#vis00", spec, embedOpt)
+                        .catch(error => showError(el, error));
+                    })(vegaEmbed);
+
+                </script>
+           
+            <div>
+                <p>  
+                    Gli <a href="#incidenti"><b>incidenti stradali</b></a>, in particolare, sono stati responsabili di un significativo numero di morti tra i giovani. Questi incidenti tragici spesso sono causati da comportamenti rischiosi alla guida o da altre circostanze che coinvolgono i trasporti.
+                    <br/>Anche i <a href="#fumo"><b>tumori</b></a> rappresentano una causa significativa di decessi tra i giovani nel 2020. Il cancro può colpire organi e tessuti diversi e può avere effetti devastanti sulla vita di un giovane. La diagnosi precoce e il trattamento tempestivo sono cruciali per combattere i tumori-à e migliorare le prospettive di sopravvivenza.
+                    <br/>Seguono i <a href="#suicidi"><b>suicidi</b></a>, spesso legati a problemi di salute mentale, stress, isolamento sociale e altri fattori psicologici. 
+                    <br/>Altro fattore rilevante sono le <b>malattie del sistema nervoso</b>, le quali possono includere condizioni neurologiche degenerative, come la sclerosi multipla o la malattia di Parkinson, che possono influire sulla qualità della vita e, in alcuni casi, portare alla morte.
+                    <br/>La <b>leucemia</b>, una forma di cancro del sangue, rappresenta un'altra causa importante di decessi tra i giovani. Questa malattia colpisce il sistema ematopoietico e può comportare una serie di complicazioni che richiedono trattamenti intensivi come la chemioterapia o il trapianto di midollo osseo.
+                    <br/>Infine abbiamo le <a href="#stile_alimentare"><b>malattie cardiache</b></a>, che possono essere congenite o acquisite e possono portare a gravi problemi cardiaci e persino all'arresto cardiaco. È fondamentale adottare uno stile di vita sano, fare esami regolari e cercare cure tempestive per prevenire o gestire queste malattie.
+                    <br></br>Tutte queste cause possono avere un impatto significativo sulla vita dei giovani e richiedono un'attenzione adeguata per prevenire, diagnosticare e trattare tali condizioni in modo tempestivo ed efficace. La promozione della consapevolezza, la prevenzione e l'accesso alle cure adeguate sono fondamentali per proteggere la salute e il benessere dei giovani.
+                </p>
+            </div> 
+              <div id="visIT"></div>
+              <script>
+                (function(vegaEmbed) {
+                  var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"grid": false, "labelFontSize": 15, "titleFontSize": 14}, "facet": {"spacing": 10}, "title": {"fontSize": 18, "offset": 30}}, "data": {"name": "data-f95773f908a4bf914cfd3b7d94097e0b"}, "mark": {"type": "bar"}, "encoding": {"color": {"condition": {"test": "(datum.DescrizioneCausa === 'Accidenti di trasporto')", "value": "#206792"}, "value": "lightgrey"}, "tooltip": [{"field": "DescrizioneCausa", "title": "Causa", "type": "nominal"}, {"field": "Decessi 2020", "title": "Totale decessi 2020", "type": "quantitative"}], "x": {"axis": {"labelAngle": 0}, "field": "DescrizioneCausa", "sort": "-y", "title": "", "type": "nominal"}, "y": {"field": "Decessi 2020", "title": "", "type": "quantitative"}}, "height": 400, "title": "", "width": 1000, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-f95773f908a4bf914cfd3b7d94097e0b": [{"DescrizioneCausa": "Accidenti di trasporto", "Decessi 2020": 586}, {"DescrizioneCausa": "Altre malattie del cuore", "Decessi 2020": 115}, {"DescrizioneCausa": "Leucemia", "Decessi 2020": 90}, {"DescrizioneCausa": "Malattie sistema nervoso", "Decessi 2020": 185}, {"DescrizioneCausa": "Suicidio e autolesione", "Decessi 2020": 465}, {"DescrizioneCausa": "Tumori (tutti i tipi)", "Decessi 2020": 502}]}};
+                  var embedOpt = {"mode": "vega-lite"};
+            
+                  function showError(el, error){
+                      el.innerHTML = ('<div style="color:red;">'
+                                      + '<p>JavaScript Error: ' + error.message + '</p>'
+                                      + "<p>This usually means there's a typo in your chart specification. "
+                                      + "See the javascript console for the full traceback.</p>"
+                                      + '</div>');
+                      throw error;
+                  }
+                  const el = document.getElementById('vis');
+                  vegaEmbed("#visIT", spec, embedOpt)
+                    .catch(error => showError(el, error));
+                })(vegaEmbed);
+            
+              </script>              
+        </section>
+
+        <section id = "menuIT">
+            <button class = "btnIT" onclick="scrollToSection('#incidenti')">Incidenti stradali</button>
+            <button class = "btnIT" onclick="scrollToSection('#suicidi')">Suicidi e autolesione</button>
+            <button class = "btnIT" onclick="scrollToSection('#fumo')">Malattie cardiache</button>
+        </section>
+
+        <section id = "incidenti">
+            <h2>Incidenti stradali: prima causa di morte prematura</h2>
+            <p>Gli incidenti stradali sono la causa primaria di morti premature in Italia: nel 2020 si registrano ben <b>586</b> morti attribuibili ad accidenti di trasporto.
+                <br/>Negli incidenti stradali i fattori coinvolti possono essere raggruppati in tre categorie: l'uomo, l'ambiente ed il veicolo. 
+                L'uomo può adottare comportamenti errati e pericolosi quali l'eccesso di velocità, l'abuso di alcol e di sostanze stupefacenti, le distrazioni alla guida, ecc...
+                <br/>Tra questi è lo stato di ebbrezza uno dei fattori maggiormente associati agli incidenti stradali.
+                <br/>Nel 2020 gli incidenti stradali si sono registrati soprattutto tra il <b>Nord e il Centro Italia</b>, seguiti dalla Sicilia. Valori minimi in Molise e Basilicata.
+            </p>
+            <div id="vis3"></div>
+            <script>
+                (function(vegaEmbed) {
+                var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "title": {"fontSize": 16, "offset": 30}}, "data": {"url": "https://raw.githubusercontent.com/openpolis/geojson-italy/master/topojson/limits_IT_regions.topo.json", "format": {"feature": "regions", "type": "topojson"}}, "mark": {"type": "geoshape"}, "encoding": {"color": {"field": "Occorrenze", "scale": {"range": ["#dadad4", "#d4dce4", "#bfd6df", "#95bed7", "#096fb5"]}, "type": "quantitative"}, "tooltip": {"field": "properties.reg_name", "type": "nominal"}}, "height": 500, "projection": {"type": "mercator"}, "title": "Distribuzione incidenti stradali in Italia", "transform": [{"lookup": "properties.reg_name", "from": {"data": {"name": "data-65b9adcdf08601e54a555e12a2592728"}, "key": " Regione/PA", "fields": [" Regione/PA", "Occorrenze"]}}], "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-65b9adcdf08601e54a555e12a2592728": [{" Regione/PA": "Abruzzo", "Occorrenze": 73}, {" Regione/PA": "Basilicata", "Occorrenze": 40}, {" Regione/PA": "Trentino-Alto Adige/S\u00fcdtirol", "Occorrenze": 45}, {" Regione/PA": "Calabria", "Occorrenze": 82}, {" Regione/PA": "Campania", "Occorrenze": 82}, {" Regione/PA": "Emilia-Romagna", "Occorrenze": 105}, {" Regione/PA": "Friuli-Venezia Giulia", "Occorrenze": 62}, {" Regione/PA": "Lazio", "Occorrenze": 103}, {" Regione/PA": "Liguria", "Occorrenze": 71}, {" Regione/PA": "Lombardia", "Occorrenze": 107}, {" Regione/PA": "Marche", "Occorrenze": 90}, {" Regione/PA": "Molise", "Occorrenze": 35}, {" Regione/PA": "Piemonte", "Occorrenze": 103}, {" Regione/PA": "Puglia", "Occorrenze": 88}, {" Regione/PA": "Sardegna", "Occorrenze": 68}, {" Regione/PA": "Sicilia", "Occorrenze": 98}, {" Regione/PA": "Toscana", "Occorrenze": 104}, {" Regione/PA": "Trentino-Alto Adige/S\u00fcdtirol", "Occorrenze": 51}, {" Regione/PA": "Umbria", "Occorrenze": 61}, {" Regione/PA": "Valle d'Aosta/Vall\u00e9e", "Occorrenze": 18}, {" Regione/PA": "Veneto", "Occorrenze": 98}]}};
+                var embedOpt = {"mode": "vega-lite"};
+
+                function showError(el, error){
+                    el.innerHTML = ('<div style="color:red;">'
+                                    + '<p>JavaScript Error: ' + error.message + '</p>'
+                                    + "<p>This usually means there's a typo in your chart specification. "
+                                    + "See the javascript console for the full traceback.</p>"
+                                    + '</div>');
+                    throw error;
+                }
+                const el = document.getElementById('vis');
+                vegaEmbed("#vis3", spec, embedOpt)
+                    .catch(error => showError(el, error));
+                })(vegaEmbed);
+            </script>
+            
+            <p>Tra i <b>fattori di rischio</b> legati allo stato del conducente le categorie particolarmente rilevanti sono:
+                <ul>
+                    <li>Alcol: è il fattore più rilevante. Il rischio di incidenti aumenta al diminuire dell'età del conducente.</li><br/>
+                    <li>Stupefacenti e farmaci: sostanze come allucinogeni, cannabinoidi, cocaina, oppiacei, estasi, ecc... comportano un notevole aumento del rischio di incidenti.</li><br/>
+                    <li>Malattie come epilessia, problemi di vista, disturbi del sonno e problemi cognitivi.</li>
+                </ul>
+            </p>
+            
+        </section>
+
+        <section id = "alcol">
+            <h2>Il consumo attuale di alcol: quanto è frequente tra i giovani l'abuso di alcol?</h2>
+            <div class = "grid-containerIT">
+                <p id ="consumo_alcol">
+                    L'abuso di alcol tra i giovani è un problema sempre più diffuso che ha conseguenze devastanti sulla società. 
+                    <br/>Molti giovani spesso ricorrono all'alcol come mezzo per sfuggire agli stress della vita quotidiana, senza rendersi conto dei pericoli che ne derivano.
+                    <br/>Le conseguenze negative del consumo di alcol sulla salute sono molteplici. Nella Classificazione Internazionale delle Malattie più di 30 categorie riguardano condizioni totalmente alcol-attribuibili.
+                    <br/>I danni alcol-correlati non coinvolgono i soli consumatori ma anche le famiglie e la comunità in generale, a causa del deterioramento delle relazioni personali e di lavoro, dei comportamenti criminali (ad esempio vandalismo e violenza), della perdita di produttività e dei costi a carico dell’assistenza sanitaria.</p>
+                    <div id="visIT1"></div>
+                    <script>
+                        (function(vegaEmbed) {
+                        var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"grid": false, "labelFontSize": 12, "titleFontSize": 14}, "facet": {"spacing": 10}, "title": {"fontSize": 17, "offset": 30}}, "data": {"name": "data-5897db248d68558e9d514ecc0a810627"}, "mark": {"type": "bar"}, "encoding": {"color": {"value": "#206792"}, "tooltip": {"field": "consumo vino e birra", "type": "quantitative"}, "x": {"axis": {"labelAngle": 0}, "field": "Classe di et\u00e0", "title": "", "type": "nominal"}, "y": {"field": "consumo vino e birra", "title": "", "type": "quantitative"}}, "height": 200, "title": {"text": ["Numero di giovani che consumano vino o birra in Italia (2022)"], "subtitle": ["Per 100 persone con le stesse caratteristiche"], "color": "black", "subtitleColor": "grey", "subtitleFontSize": 15}, "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-5897db248d68558e9d514ecc0a810627": [{"Anno": 2022, "Classe di et\u00e0": "14-17 anni", "persone di 11 anni e pi\u00f9 che consumano vino": 12.1, "pi\u00f9 di mezzo litro di vino al giorno": 0.4, "1-2 bicchieri di vino al giorno": 0.5, "consuma vino pi\u00f9 raramente": 7.9, "persone di 11 anni e pi\u00f9 che consumano birra": 17.9, "consuma birra tutti i giorni": 1.2, "consuma birra pi\u00f9 raramente": 11.4, "consuma birra solo stagionalmente": 5.2, "consumo vino e birra": 30.0}, {"Anno": 2022, "Classe di et\u00e0": "18-19 anni", "persone di 11 anni e pi\u00f9 che consumano vino": 36.9, "pi\u00f9 di mezzo litro di vino al giorno": 0.7, "1-2 bicchieri di vino al giorno": 1.3, "consuma vino pi\u00f9 raramente": 26.5, "persone di 11 anni e pi\u00f9 che consumano birra": 47.1, "consuma birra tutti i giorni": 2.2, "consuma birra pi\u00f9 raramente": 33.8, "consuma birra solo stagionalmente": 11.1, "consumo vino e birra": 84.0}, {"Anno": 2022, "Classe di et\u00e0": "20-24 anni", "persone di 11 anni e pi\u00f9 che consumano vino": 48.9, "pi\u00f9 di mezzo litro di vino al giorno": 0.4, "1-2 bicchieri di vino al giorno": 2.5, "consuma vino pi\u00f9 raramente": 35.4, "persone di 11 anni e pi\u00f9 che consumano birra": 58.4, "consuma birra tutti i giorni": 4.9, "consuma birra pi\u00f9 raramente": 40.5, "consuma birra solo stagionalmente": 13.0, "consumo vino e birra": 107.3}, {"Anno": 2022, "Classe di et\u00e0": "25-34 anni", "persone di 11 anni e pi\u00f9 che consumano vino": 59.3, "pi\u00f9 di mezzo litro di vino al giorno": 1.2, "1-2 bicchieri di vino al giorno": 5.5, "consuma vino pi\u00f9 raramente": 43.8, "persone di 11 anni e pi\u00f9 che consumano birra": 62.9, "consuma birra tutti i giorni": 7.1, "consuma birra pi\u00f9 raramente": 43.8, "consuma birra solo stagionalmente": 12.0, "consumo vino e birra": 122.19999999999999}]}};
+                        var embedOpt = {"mode": "vega-lite"};
+
+                        function showError(el, error){
+                            el.innerHTML = ('<div style="color:red;">'
+                                            + '<p>JavaScript Error: ' + error.message + '</p>'
+                                            + "<p>This usually means there's a typo in your chart specification. "
+                                            + "See the javascript console for the full traceback.</p>"
+                                            + '</div>');
+                            throw error;
+                        }
+                        const el = document.getElementById('vis');
+                        vegaEmbed("#visIT1", spec, embedOpt)
+                            .catch(error => showError(el, error));
+                        })(vegaEmbed);
+                        </script>
+            </div>
+            <h3>Le morti alcol-correlate</h3>
+            <p>Una delle conseguenze più gravi dell'abuso di alcol da parte dei giovani è la correlazione diretta con gli <b>incidenti stradali</b>. L'alcol influisce negativamente sulla capacità di guidare in modo sicuro e responsabile. Gli effetti dell'alcol sul sistema nervoso centrale rallentano i tempi di reazione, compromettono il coordinamento motorio e alterano la percezione delle distanze e dei rischi. 
+            Di conseguenza, i giovani guidatori sotto l'influenza dell'alcol diventano un pericolo per se stessi e per gli altri utenti della strada.
+            <br/>Le statistiche dimostrano chiaramente la correlazione: dai dati forniti da Carabinieri e Polizia stradale si stima che gli incidenti stradali alcol-correlati in Italia siano pari al 10% degli incidenti mortali.
+            <br/>Negli incidenti causati da guida in stato di ubriachezza la stragrande maggioranza delle persone coinvolte è rappresentata da individui di sesso maschile, di cui il 33% giovani o giovani adulti di età compresa tra i 15 e i 34 anni.  
+            <div class = "grid-containerIT2">
+                <p>Allo stesso modo la grande maggioranza dei decessi causati dall'abuso di alcol nei giovani riguarda gli <b>uomini</b>, nettamente inferiore è la percentuale relativa alle donne.
+                    <br/>Seppur in minoranza, si è registrata negli ultimi venti anni una progressiva riduzione del numero di donne astemie. L'organismo femminile, a differenza di quello degli uomini, presenta una maggiore sensibilità e vulnerabilità fisiologica, legata anche a gravidanza e allattamento.
+                    <br/>Nelle donne l'abuso di alcool può favorire lo sviluppo di tumori alla mammella ed incide negativamente sulla fertilità.
+                </p>
+                <img src = "./grafici/alcolpersesso.svg"/>
+            </div>
+            <p>A livello di regioni italiane le prime per morti dovute ad abuso di alcol sono la Lombardia, il Piemonte, il Veneto e l'Emilia Romagna; i numeri più bassi si registrano invece nel Sud e nel Centro Italia.
+            <br/>Allo stesso modo i consumi di alcol tra i giovani sono diffusi in numero maggiore in Emilia-Romagna, Veneto e Friuli-Venezia Giulia; meno nel Sud Italia e in Sardegna.
+            </p>
+            
+            <div id = "mappe">
+            <div id="vis"></div>
+                <script>
+                    (function(vegaEmbed) {
+                    var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "title": {"fontSize": 16, "offset": 30}}, "data": {"url": "https://raw.githubusercontent.com/openpolis/geojson-italy/master/topojson/limits_IT_regions.topo.json", "format": {"feature": "regions", "type": "topojson"}}, "mark": {"type": "geoshape"}, "encoding": {"color": {"field": "Occorrenze", "scale": {"range": ["#dadad4", "#d4dce4", "#bfd6df", "#95bed7", "#096fb5"]}, "type": "quantitative"}, "tooltip": {"field": "properties.reg_name", "type": "nominal"}}, "height": 500, "projection": {"type": "mercator"}, "title": "Distribuzione morti per abuso di alcol in Italia", "transform": [{"lookup": "properties.reg_name", "from": {"data": {"name": "data-500a1919c48310c9a9e9a8f3a8dbfa70"}, "key": " Regione/PA", "fields": [" Regione/PA", "Occorrenze"]}}], "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-500a1919c48310c9a9e9a8f3a8dbfa70": [{" Regione/PA": "Abruzzo", "Occorrenze": 29}, {" Regione/PA": "Basilicata", "Occorrenze": 8}, {" Regione/PA": "Trentino-Alto Adige/S\u00fcdtirol", "Occorrenze": 24}, {" Regione/PA": "Calabria", "Occorrenze": 28}, {" Regione/PA": "Campania", "Occorrenze": 42}, {" Regione/PA": "Emilia-Romagna", "Occorrenze": 67}, {" Regione/PA": "Friuli-Venezia Giulia", "Occorrenze": 50}, {" Regione/PA": "Lazio", "Occorrenze": 57}, {" Regione/PA": "Liguria", "Occorrenze": 44}, {" Regione/PA": "Lombardia", "Occorrenze": 95}, {" Regione/PA": "Marche", "Occorrenze": 32}, {" Regione/PA": "Molise", "Occorrenze": 7}, {" Regione/PA": "Piemonte", "Occorrenze": 84}, {" Regione/PA": "Puglia", "Occorrenze": 43}, {" Regione/PA": "Sardegna", "Occorrenze": 48}, {" Regione/PA": "Sicilia", "Occorrenze": 34}, {" Regione/PA": "Toscana", "Occorrenze": 55}, {" Regione/PA": "Trentino-Alto Adige/S\u00fcdtirol", "Occorrenze": 16}, {" Regione/PA": "Umbria", "Occorrenze": 12}, {" Regione/PA": "Valle d'Aosta/Vall\u00e9e", "Occorrenze": 7}, {" Regione/PA": "Veneto", "Occorrenze": 76}]}};
+                    var embedOpt = {"mode": "vega-lite"};
+                
+                    function showError(el, error){
+                        el.innerHTML = ('<div style="color:red;">'
+                                        + '<p>JavaScript Error: ' + error.message + '</p>'
+                                        + "<p>This usually means there's a typo in your chart specification. "
+                                        + "See the javascript console for the full traceback.</p>"
+                                        + '</div>');
+                        throw error;
+                    }
+                    const el = document.getElementById('vis');
+                    vegaEmbed("#vis", spec, embedOpt)
+                        .catch(error => showError(el, error));
+                    })(vegaEmbed);
+                
+                </script>
+
+            <div id = "vis2"></div>
+                <script>
+                    (function(vegaEmbed) {
+                      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "title": {"fontSize": 16, "offset": 30}}, "data": {"url": "https://raw.githubusercontent.com/openpolis/geojson-italy/master/topojson/limits_IT_regions.topo.json", "format": {"feature": "regions", "type": "topojson"}}, "mark": {"type": "geoshape"}, "encoding": {"color": {"field": "tot vino e birra", "scale": {"range": ["#dadad4", "#d4dce4", "#bfd6df", "#95bed7", "#096fb5"]}, "type": "quantitative"}, "tooltip": {"field": "properties.reg_name", "type": "nominal"}}, "height": 500, "projection": {"type": "mercator"}, "title": "Giovani che consumano birra e vino in Italia", "transform": [{"lookup": "properties.reg_name", "from": {"data": {"name": "data-c94c18b20896407d0cec17ce1b7fcb9a"}, "key": "Territorio", "fields": ["Territorio", "tot vino e birra"]}}], "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-c94c18b20896407d0cec17ce1b7fcb9a": [{"Anno": "2021", "Territorio": "Italia", "persone di 11 anni e pi\u00f9 che consumano vino": 54.4, "pi\u00f9 di mezzo litro di vino al giorno": 2, "1-2 bicchieri di vino al giorno": 15, "consuma vino pi\u00f9 raramente": 31.3, "persone di 11 anni e pi\u00f9 che consumano birra": 50.4, "consuma birra tutti i giorni": 5, "consuma birra pi\u00f9 raramente": 32.7, "consuma birra solo stagionalmente": 12.6, "tot vino e birra": 104.8}, {"Anno": "2021", "Territorio": "Nord", "persone di 11 anni e pi\u00f9 che consumano vino": 58, "pi\u00f9 di mezzo litro di vino al giorno": 2.2, "1-2 bicchieri di vino al giorno": 16.6, "consuma vino pi\u00f9 raramente": 33.2, "persone di 11 anni e pi\u00f9 che consumano birra": 51.1, "consuma birra tutti i giorni": 5.2, "consuma birra pi\u00f9 raramente": 34.6, "consuma birra solo stagionalmente": 11.2, "tot vino e birra": 109.1}, {"Anno": "2021", "Territorio": "Nord-ovest", "persone di 11 anni e pi\u00f9 che consumano vino": 57.4, "pi\u00f9 di mezzo litro di vino al giorno": 2.2, "1-2 bicchieri di vino al giorno": 16.6, "consuma vino pi\u00f9 raramente": 32.8, "persone di 11 anni e pi\u00f9 che consumano birra": 50.1, "consuma birra tutti i giorni": 5.1, "consuma birra pi\u00f9 raramente": 33.5, "consuma birra solo stagionalmente": 11.5, "tot vino e birra": 107.5}, {"Anno": "2021", "Territorio": "Piemonte", "persone di 11 anni e pi\u00f9 che consumano vino": 58.7, "pi\u00f9 di mezzo litro di vino al giorno": 2.5, "1-2 bicchieri di vino al giorno": 17.6, "consuma vino pi\u00f9 raramente": 33, "persone di 11 anni e pi\u00f9 che consumano birra": 50.7, "consuma birra tutti i giorni": 4.8, "consuma birra pi\u00f9 raramente": 34.6, "consuma birra solo stagionalmente": 11.3, "tot vino e birra": 109.4}, {"Anno": "2021", "Territorio": "Valle d'Aosta/Vall\u00e9e", "persone di 11 anni e pi\u00f9 che consumano vino": 59.6, "pi\u00f9 di mezzo litro di vino al giorno": 2.4, "1-2 bicchieri di vino al giorno": 16, "consuma vino pi\u00f9 raramente": 34.2, "persone di 11 anni e pi\u00f9 che consumano birra": 54.2, "consuma birra tutti i giorni": 6.1, "consuma birra pi\u00f9 raramente": 38.7, "consuma birra solo stagionalmente": 9.4, "tot vino e birra": 113.80000000000001}, {"Anno": "2021", "Territorio": "Liguria", "persone di 11 anni e pi\u00f9 che consumano vino": 57.6, "pi\u00f9 di mezzo litro di vino al giorno": 1.5, "1-2 bicchieri di vino al giorno": 17.5, "consuma vino pi\u00f9 raramente": 34.5, "persone di 11 anni e pi\u00f9 che consumano birra": 52.2, "consuma birra tutti i giorni": 4.8, "consuma birra pi\u00f9 raramente": 37.4, "consuma birra solo stagionalmente": 10, "tot vino e birra": 109.80000000000001}, {"Anno": "2021", "Territorio": "Lombardia", "persone di 11 anni e pi\u00f9 che consumano vino": 56.9, "pi\u00f9 di mezzo litro di vino al giorno": 2.1, "1-2 bicchieri di vino al giorno": 16.1, "consuma vino pi\u00f9 raramente": 32.5, "persone di 11 anni e pi\u00f9 che consumano birra": 49.4, "consuma birra tutti i giorni": 5.2, "consuma birra pi\u00f9 raramente": 32.3, "consuma birra solo stagionalmente": 11.8, "tot vino e birra": 106.3}, {"Anno": "2021", "Territorio": "Nord-est", "persone di 11 anni e pi\u00f9 che consumano vino": 58.7, "pi\u00f9 di mezzo litro di vino al giorno": 2.2, "1-2 bicchieri di vino al giorno": 16.5, "consuma vino pi\u00f9 raramente": 33.8, "persone di 11 anni e pi\u00f9 che consumano birra": 52.4, "consuma birra tutti i giorni": 5.4, "consuma birra pi\u00f9 raramente": 36.1, "consuma birra solo stagionalmente": 10.9, "tot vino e birra": 111.1}, {"Anno": "2021", "Territorio": "Trentino-Alto Adige/S\u00fcdtirol", "persone di 11 anni e pi\u00f9 che consumano vino": 54.8, "pi\u00f9 di mezzo litro di vino al giorno": 1.5, "1-2 bicchieri di vino al giorno": 11.6, "consuma vino pi\u00f9 raramente": 33.4, "persone di 11 anni e pi\u00f9 che consumano birra": 51.5, "consuma birra tutti i giorni": 6.2, "consuma birra pi\u00f9 raramente": 33.1, "consuma birra solo stagionalmente": 12.2, "tot vino e birra": 106.3}, {"Anno": "2021", "Territorio": "Trentino-Alto Adige/S\u00fcdtirol", "persone di 11 anni e pi\u00f9 che consumano vino": 55.7, "pi\u00f9 di mezzo litro di vino al giorno": 1.2, "1-2 bicchieri di vino al giorno": 9.8, "consuma vino pi\u00f9 raramente": 34.5, "persone di 11 anni e pi\u00f9 che consumano birra": 50.8, "consuma birra tutti i giorni": 6.3, "consuma birra pi\u00f9 raramente": 31.8, "consuma birra solo stagionalmente": 12.7, "tot vino e birra": 106.5}, {"Anno": "2021", "Territorio": "Trentino-Alto Adige/S\u00fcdtirol", "persone di 11 anni e pi\u00f9 che consumano vino": 54, "pi\u00f9 di mezzo litro di vino al giorno": 1.8, "1-2 bicchieri di vino al giorno": 13.3, "consuma vino pi\u00f9 raramente": 32.2, "persone di 11 anni e pi\u00f9 che consumano birra": 52.2, "consuma birra tutti i giorni": 6.1, "consuma birra pi\u00f9 raramente": 34.3, "consuma birra solo stagionalmente": 11.8, "tot vino e birra": 106.2}, {"Anno": "2021", "Territorio": "Veneto", "persone di 11 anni e pi\u00f9 che consumano vino": 59.1, "pi\u00f9 di mezzo litro di vino al giorno": 2.3, "1-2 bicchieri di vino al giorno": 16.4, "consuma vino pi\u00f9 raramente": 34.5, "persone di 11 anni e pi\u00f9 che consumano birra": 53.6, "consuma birra tutti i giorni": 4.7, "consuma birra pi\u00f9 raramente": 38.1, "consuma birra solo stagionalmente": 10.9, "tot vino e birra": 112.7}, {"Anno": "2021", "Territorio": "Friuli-Venezia Giulia", "persone di 11 anni e pi\u00f9 che consumano vino": 58.6, "pi\u00f9 di mezzo litro di vino al giorno": 2.5, "1-2 bicchieri di vino al giorno": 17.5, "consuma vino pi\u00f9 raramente": 32.3, "persone di 11 anni e pi\u00f9 che consumano birra": 55.4, "consuma birra tutti i giorni": 6.8, "consuma birra pi\u00f9 raramente": 37.4, "consuma birra solo stagionalmente": 11.2, "tot vino e birra": 114.0}, {"Anno": "2021", "Territorio": "Emilia-Romagna", "persone di 11 anni e pi\u00f9 che consumano vino": 59.1, "pi\u00f9 di mezzo litro di vino al giorno": 2.3, "1-2 bicchieri di vino al giorno": 17.5, "consuma vino pi\u00f9 raramente": 33.5, "persone di 11 anni e pi\u00f9 che consumano birra": 50.6, "consuma birra tutti i giorni": 5.6, "consuma birra pi\u00f9 raramente": 34.4, "consuma birra solo stagionalmente": 10.5, "tot vino e birra": 109.7}, {"Anno": "2021", "Territorio": "Centro", "persone di 11 anni e pi\u00f9 che consumano vino": 58.4, "pi\u00f9 di mezzo litro di vino al giorno": 2.3, "1-2 bicchieri di vino al giorno": 16.4, "consuma vino pi\u00f9 raramente": 34, "persone di 11 anni e pi\u00f9 che consumano birra": 52.1, "consuma birra tutti i giorni": 4.8, "consuma birra pi\u00f9 raramente": 34.2, "consuma birra solo stagionalmente": 13.1, "tot vino e birra": 110.5}, {"Anno": "2021", "Territorio": "Toscana", "persone di 11 anni e pi\u00f9 che consumano vino": 58.9, "pi\u00f9 di mezzo litro di vino al giorno": 2.9, "1-2 bicchieri di vino al giorno": 18.2, "consuma vino pi\u00f9 raramente": 32.4, "persone di 11 anni e pi\u00f9 che consumano birra": 52.2, "consuma birra tutti i giorni": 4.7, "consuma birra pi\u00f9 raramente": 35.6, "consuma birra solo stagionalmente": 11.9, "tot vino e birra": 111.1}, {"Anno": "2021", "Territorio": "Umbria", "persone di 11 anni e pi\u00f9 che consumano vino": 61.5, "pi\u00f9 di mezzo litro di vino al giorno": 2.9, "1-2 bicchieri di vino al giorno": 18.1, "consuma vino pi\u00f9 raramente": 35.5, "persone di 11 anni e pi\u00f9 che consumano birra": 51.4, "consuma birra tutti i giorni": 4.1, "consuma birra pi\u00f9 raramente": 34.7, "consuma birra solo stagionalmente": 12.6, "tot vino e birra": 112.9}, {"Anno": "2021", "Territorio": "Marche", "persone di 11 anni e pi\u00f9 che consumano vino": 60.1, "pi\u00f9 di mezzo litro di vino al giorno": 2.7, "1-2 bicchieri di vino al giorno": 20.7, "consuma vino pi\u00f9 raramente": 32, "persone di 11 anni e pi\u00f9 che consumano birra": 53.5, "consuma birra tutti i giorni": 5.9, "consuma birra pi\u00f9 raramente": 35.9, "consuma birra solo stagionalmente": 11.8, "tot vino e birra": 113.6}, {"Anno": "2021", "Territorio": "Lazio", "persone di 11 anni e pi\u00f9 che consumano vino": 57.2, "pi\u00f9 di mezzo litro di vino al giorno": 1.8, "1-2 bicchieri di vino al giorno": 13.9, "consuma vino pi\u00f9 raramente": 35.3, "persone di 11 anni e pi\u00f9 che consumano birra": 51.7, "consuma birra tutti i giorni": 4.8, "consuma birra pi\u00f9 raramente": 32.8, "consuma birra solo stagionalmente": 14.2, "tot vino e birra": 108.9}, {"Anno": "2021", "Territorio": "Mezzogiorno", "persone di 11 anni e pi\u00f9 che consumano vino": 47.1, "pi\u00f9 di mezzo litro di vino al giorno": 1.6, "1-2 bicchieri di vino al giorno": 12.1, "consuma vino pi\u00f9 raramente": 27.2, "persone di 11 anni e pi\u00f9 che consumano birra": 48.4, "consuma birra tutti i giorni": 4.9, "consuma birra pi\u00f9 raramente": 29.2, "consuma birra solo stagionalmente": 14.3, "tot vino e birra": 95.5}, {"Anno": "2021", "Territorio": "Sud", "persone di 11 anni e pi\u00f9 che consumano vino": 48.3, "pi\u00f9 di mezzo litro di vino al giorno": 1.8, "1-2 bicchieri di vino al giorno": 12.8, "consuma vino pi\u00f9 raramente": 27.7, "persone di 11 anni e pi\u00f9 che consumano birra": 48.8, "consuma birra tutti i giorni": 4.5, "consuma birra pi\u00f9 raramente": 31, "consuma birra solo stagionalmente": 13.3, "tot vino e birra": 97.1}, {"Anno": "2021", "Territorio": "Abruzzo", "persone di 11 anni e pi\u00f9 che consumano vino": 51.5, "pi\u00f9 di mezzo litro di vino al giorno": 1.2, "1-2 bicchieri di vino al giorno": 13.5, "consuma vino pi\u00f9 raramente": 29.9, "persone di 11 anni e pi\u00f9 che consumano birra": 52.6, "consuma birra tutti i giorni": 4.1, "consuma birra pi\u00f9 raramente": 33.5, "consuma birra solo stagionalmente": 14.9, "tot vino e birra": 104.1}, {"Anno": "2021", "Territorio": "Molise", "persone di 11 anni e pi\u00f9 che consumano vino": 50.6, "pi\u00f9 di mezzo litro di vino al giorno": 3.5, "1-2 bicchieri di vino al giorno": 16.3, "consuma vino pi\u00f9 raramente": 25.5, "persone di 11 anni e pi\u00f9 che consumano birra": 51.2, "consuma birra tutti i giorni": 9.6, "consuma birra pi\u00f9 raramente": 26.9, "consuma birra solo stagionalmente": 14.8, "tot vino e birra": 101.80000000000001}, {"Anno": "2021", "Territorio": "Campania", "persone di 11 anni e pi\u00f9 che consumano vino": 47.2, "pi\u00f9 di mezzo litro di vino al giorno": 1.7, "1-2 bicchieri di vino al giorno": 11.7, "consuma vino pi\u00f9 raramente": 26.9, "persone di 11 anni e pi\u00f9 che consumano birra": 47.1, "consuma birra tutti i giorni": 4.1, "consuma birra pi\u00f9 raramente": 28.8, "consuma birra solo stagionalmente": 14.2, "tot vino e birra": 94.30000000000001}, {"Anno": "2021", "Territorio": "Puglia", "persone di 11 anni e pi\u00f9 che consumano vino": 48.8, "pi\u00f9 di mezzo litro di vino al giorno": 2, "1-2 bicchieri di vino al giorno": 14.3, "consuma vino pi\u00f9 raramente": 27.8, "persone di 11 anni e pi\u00f9 che consumano birra": 48.7, "consuma birra tutti i giorni": 4.6, "consuma birra pi\u00f9 raramente": 33.9, "consuma birra solo stagionalmente": 10.2, "tot vino e birra": 97.5}, {"Anno": "2021", "Territorio": "Basilicata", "persone di 11 anni e pi\u00f9 che consumano vino": 48.8, "pi\u00f9 di mezzo litro di vino al giorno": 3.2, "1-2 bicchieri di vino al giorno": 14.7, "consuma vino pi\u00f9 raramente": 25.8, "persone di 11 anni e pi\u00f9 che consumano birra": 48.9, "consuma birra tutti i giorni": 4.3, "consuma birra pi\u00f9 raramente": 32.4, "consuma birra solo stagionalmente": 12.2, "tot vino e birra": 97.69999999999999}, {"Anno": "2021", "Territorio": "Calabria", "persone di 11 anni e pi\u00f9 che consumano vino": 47.5, "pi\u00f9 di mezzo litro di vino al giorno": 1.7, "1-2 bicchieri di vino al giorno": 11.4, "consuma vino pi\u00f9 raramente": 29, "persone di 11 anni e pi\u00f9 che consumano birra": 51.1, "consuma birra tutti i giorni": 4.9, "consuma birra pi\u00f9 raramente": 29.9, "consuma birra solo stagionalmente": 16.2, "tot vino e birra": 98.6}, {"Anno": "2021", "Territorio": "Isole", "persone di 11 anni e pi\u00f9 che consumano vino": 44.6, "pi\u00f9 di mezzo litro di vino al giorno": 1.3, "1-2 bicchieri di vino al giorno": 10.6, "consuma vino pi\u00f9 raramente": 26.3, "persone di 11 anni e pi\u00f9 che consumano birra": 47.6, "consuma birra tutti i giorni": 5.8, "consuma birra pi\u00f9 raramente": 25.7, "consuma birra solo stagionalmente": 16.2, "tot vino e birra": 92.2}, {"Anno": "2021", "Territorio": "Sicilia", "persone di 11 anni e pi\u00f9 che consumano vino": 43.8, "pi\u00f9 di mezzo litro di vino al giorno": 1.2, "1-2 bicchieri di vino al giorno": 9.9, "consuma vino pi\u00f9 raramente": 25.8, "persone di 11 anni e pi\u00f9 che consumano birra": 47, "consuma birra tutti i giorni": 4.9, "consuma birra pi\u00f9 raramente": 24, "consuma birra solo stagionalmente": 18.1, "tot vino e birra": 90.8}, {"Anno": "2021", "Territorio": "Sardegna", "persone di 11 anni e pi\u00f9 che consumano vino": 47.2, "pi\u00f9 di mezzo litro di vino al giorno": 1.6, "1-2 bicchieri di vino al giorno": 12.8, "consuma vino pi\u00f9 raramente": 27.8, "persone di 11 anni e pi\u00f9 che consumano birra": 49.6, "consuma birra tutti i giorni": 8.4, "consuma birra pi\u00f9 raramente": 30.7, "consuma birra solo stagionalmente": 10.6, "tot vino e birra": 96.80000000000001}, {"Anno": "2021", "Territorio": "  centro area metropolitana", "persone di 11 anni e pi\u00f9 che consumano vino": 56.7, "pi\u00f9 di mezzo litro di vino al giorno": 2, "1-2 bicchieri di vino al giorno": 14.5, "consuma vino pi\u00f9 raramente": 34.4, "persone di 11 anni e pi\u00f9 che consumano birra": 52.6, "consuma birra tutti i giorni": 4.1, "consuma birra pi\u00f9 raramente": 33.8, "consuma birra solo stagionalmente": 14.8, "tot vino e birra": 109.30000000000001}, {"Anno": "2021", "Territorio": "  periferia area metropolitana", "persone di 11 anni e pi\u00f9 che consumano vino": 53.6, "pi\u00f9 di mezzo litro di vino al giorno": 1.5, "1-2 bicchieri di vino al giorno": 15.3, "consuma vino pi\u00f9 raramente": 31, "persone di 11 anni e pi\u00f9 che consumano birra": 50.2, "consuma birra tutti i giorni": 5, "consuma birra pi\u00f9 raramente": 32.5, "consuma birra solo stagionalmente": 12.8, "tot vino e birra": 103.80000000000001}, {"Anno": "2021", "Territorio": "  fino a 2.000 ab.", "persone di 11 anni e pi\u00f9 che consumano vino": 57.1, "pi\u00f9 di mezzo litro di vino al giorno": 2.8, "1-2 bicchieri di vino al giorno": 16.6, "consuma vino pi\u00f9 raramente": 31.8, "persone di 11 anni e pi\u00f9 che consumano birra": 52.3, "consuma birra tutti i giorni": 7.5, "consuma birra pi\u00f9 raramente": 32.6, "consuma birra solo stagionalmente": 12.2, "tot vino e birra": 109.4}, {"Anno": "2021", "Territorio": "  2.001 - 10.000 ab.", "persone di 11 anni e pi\u00f9 che consumano vino": 52.9, "pi\u00f9 di mezzo litro di vino al giorno": 2.4, "1-2 bicchieri di vino al giorno": 15.4, "consuma vino pi\u00f9 raramente": 29.3, "persone di 11 anni e pi\u00f9 che consumano birra": 48.1, "consuma birra tutti i giorni": 5.9, "consuma birra pi\u00f9 raramente": 30.9, "consuma birra solo stagionalmente": 11.3, "tot vino e birra": 101.0}, {"Anno": "2021", "Territorio": "  10.001 - 50.000 ab.", "persone di 11 anni e pi\u00f9 che consumano vino": 53.2, "pi\u00f9 di mezzo litro di vino al giorno": 2.1, "1-2 bicchieri di vino al giorno": 14.8, "consuma vino pi\u00f9 raramente": 30.1, "persone di 11 anni e pi\u00f9 che consumano birra": 50.2, "consuma birra tutti i giorni": 4.7, "consuma birra pi\u00f9 raramente": 33.2, "consuma birra solo stagionalmente": 12.3, "tot vino e birra": 103.4}, {"Anno": "2021", "Territorio": "  50.001 ab. e pi\u00f9", "persone di 11 anni e pi\u00f9 che consumano vino": 55.8, "pi\u00f9 di mezzo litro di vino al giorno": 1.8, "1-2 bicchieri di vino al giorno": 14.6, "consuma vino pi\u00f9 raramente": 33.4, "persone di 11 anni e pi\u00f9 che consumano birra": 51.1, "consuma birra tutti i giorni": 4.7, "consuma birra pi\u00f9 raramente": 33.4, "consuma birra solo stagionalmente": 13, "tot vino e birra": 106.9}, {"Anno": "2022", "Territorio": "Italia", "persone di 11 anni e pi\u00f9 che consumano vino": 54.9, "pi\u00f9 di mezzo litro di vino al giorno": 2, "1-2 bicchieri di vino al giorno": 14.6, "consuma vino pi\u00f9 raramente": 32.2, "persone di 11 anni e pi\u00f9 che consumano birra": 51.3, "consuma birra tutti i giorni": 5.4, "consuma birra pi\u00f9 raramente": 33.6, "consuma birra solo stagionalmente": 12.2, "tot vino e birra": 106.19999999999999}, {"Anno": null, "Territorio": "Nord", "persone di 11 anni e pi\u00f9 che consumano vino": 58.4, "pi\u00f9 di mezzo litro di vino al giorno": 2.3, "1-2 bicchieri di vino al giorno": 15.5, "consuma vino pi\u00f9 raramente": 34.7, "persone di 11 anni e pi\u00f9 che consumano birra": 52.4, "consuma birra tutti i giorni": 5.2, "consuma birra pi\u00f9 raramente": 36.1, "consuma birra solo stagionalmente": 11.1, "tot vino e birra": 110.8}, {"Anno": null, "Territorio": "Nord-ovest", "persone di 11 anni e pi\u00f9 che consumano vino": 57.1, "pi\u00f9 di mezzo litro di vino al giorno": 2.3, "1-2 bicchieri di vino al giorno": 15.9, "consuma vino pi\u00f9 raramente": 33.2, "persone di 11 anni e pi\u00f9 che consumano birra": 51.1, "consuma birra tutti i giorni": 5.3, "consuma birra pi\u00f9 raramente": 34.8, "consuma birra solo stagionalmente": 11, "tot vino e birra": 108.2}, {"Anno": null, "Territorio": "Piemonte", "persone di 11 anni e pi\u00f9 che consumano vino": 57.5, "pi\u00f9 di mezzo litro di vino al giorno": 2.7, "1-2 bicchieri di vino al giorno": 16.3, "consuma vino pi\u00f9 raramente": 33.3, "persone di 11 anni e pi\u00f9 che consumano birra": 52.4, "consuma birra tutti i giorni": 5.5, "consuma birra pi\u00f9 raramente": 36.2, "consuma birra solo stagionalmente": 10.7, "tot vino e birra": 109.9}, {"Anno": null, "Territorio": "Valle d'Aosta/Vall\u00e9e", "persone di 11 anni e pi\u00f9 che consumano vino": 60.6, "pi\u00f9 di mezzo litro di vino al giorno": 2.8, "1-2 bicchieri di vino al giorno": 15.4, "consuma vino pi\u00f9 raramente": 34.4, "persone di 11 anni e pi\u00f9 che consumano birra": 54.5, "consuma birra tutti i giorni": 6.3, "consuma birra pi\u00f9 raramente": 35, "consuma birra solo stagionalmente": 13.3, "tot vino e birra": 115.1}, {"Anno": null, "Territorio": "Liguria", "persone di 11 anni e pi\u00f9 che consumano vino": 59.1, "pi\u00f9 di mezzo litro di vino al giorno": 2.8, "1-2 bicchieri di vino al giorno": 16.2, "consuma vino pi\u00f9 raramente": 34.4, "persone di 11 anni e pi\u00f9 che consumano birra": 54, "consuma birra tutti i giorni": 6.1, "consuma birra pi\u00f9 raramente": 37.1, "consuma birra solo stagionalmente": 10.7, "tot vino e birra": 113.1}, {"Anno": null, "Territorio": "Lombardia", "persone di 11 anni e pi\u00f9 che consumano vino": 56.5, "pi\u00f9 di mezzo litro di vino al giorno": 2.1, "1-2 bicchieri di vino al giorno": 15.7, "consuma vino pi\u00f9 raramente": 33, "persone di 11 anni e pi\u00f9 che consumano birra": 50, "consuma birra tutti i giorni": 5.1, "consuma birra pi\u00f9 raramente": 33.8, "consuma birra solo stagionalmente": 11.1, "tot vino e birra": 106.5}, {"Anno": null, "Territorio": "Nord-est", "persone di 11 anni e pi\u00f9 che consumano vino": 60.3, "pi\u00f9 di mezzo litro di vino al giorno": 2.1, "1-2 bicchieri di vino al giorno": 15.1, "consuma vino pi\u00f9 raramente": 36.8, "persone di 11 anni e pi\u00f9 che consumano birra": 54.3, "consuma birra tutti i giorni": 5.1, "consuma birra pi\u00f9 raramente": 38, "consuma birra solo stagionalmente": 11.3, "tot vino e birra": 114.6}, {"Anno": null, "Territorio": "Trentino-Alto Adige/S\u00fcdtirol", "persone di 11 anni e pi\u00f9 che consumano vino": 55.2, "pi\u00f9 di mezzo litro di vino al giorno": 1.5, "1-2 bicchieri di vino al giorno": 10.3, "consuma vino pi\u00f9 raramente": 36.1, "persone di 11 anni e pi\u00f9 che consumano birra": 54.5, "consuma birra tutti i giorni": 5.5, "consuma birra pi\u00f9 raramente": 38.3, "consuma birra solo stagionalmente": 10.8, "tot vino e birra": 109.7}, {"Anno": null, "Territorio": "Trentino-Alto Adige/S\u00fcdtirol", "persone di 11 anni e pi\u00f9 che consumano vino": 56.9, "pi\u00f9 di mezzo litro di vino al giorno": 1.7, "1-2 bicchieri di vino al giorno": 8.5, "consuma vino pi\u00f9 raramente": 37.5, "persone di 11 anni e pi\u00f9 che consumano birra": 55.2, "consuma birra tutti i giorni": 5.9, "consuma birra pi\u00f9 raramente": 37.7, "consuma birra solo stagionalmente": 11.7, "tot vino e birra": 112.1}, {"Anno": null, "Territorio": "Trentino-Alto Adige/S\u00fcdtirol", "persone di 11 anni e pi\u00f9 che consumano vino": 53.4, "pi\u00f9 di mezzo litro di vino al giorno": 1.2, "1-2 bicchieri di vino al giorno": 12, "consuma vino pi\u00f9 raramente": 34.7, "persone di 11 anni e pi\u00f9 che consumano birra": 53.8, "consuma birra tutti i giorni": 5.1, "consuma birra pi\u00f9 raramente": 38.8, "consuma birra solo stagionalmente": 9.9, "tot vino e birra": 107.19999999999999}, {"Anno": null, "Territorio": "Veneto", "persone di 11 anni e pi\u00f9 che consumano vino": 60, "pi\u00f9 di mezzo litro di vino al giorno": 2.3, "1-2 bicchieri di vino al giorno": 15.3, "consuma vino pi\u00f9 raramente": 36.3, "persone di 11 anni e pi\u00f9 che consumano birra": 55, "consuma birra tutti i giorni": 5.1, "consuma birra pi\u00f9 raramente": 38.5, "consuma birra solo stagionalmente": 11.5, "tot vino e birra": 115}, {"Anno": null, "Territorio": "Friuli-Venezia Giulia", "persone di 11 anni e pi\u00f9 che consumano vino": 59, "pi\u00f9 di mezzo litro di vino al giorno": 1.8, "1-2 bicchieri di vino al giorno": 14.7, "consuma vino pi\u00f9 raramente": 37.1, "persone di 11 anni e pi\u00f9 che consumano birra": 56, "consuma birra tutti i giorni": 5.7, "consuma birra pi\u00f9 raramente": 38.3, "consuma birra solo stagionalmente": 12, "tot vino e birra": 115}, {"Anno": null, "Territorio": "Emilia-Romagna", "persone di 11 anni e pi\u00f9 che consumano vino": 62.3, "pi\u00f9 di mezzo litro di vino al giorno": 2.2, "1-2 bicchieri di vino al giorno": 16, "consuma vino pi\u00f9 raramente": 37.5, "persone di 11 anni e pi\u00f9 che consumano birra": 53.1, "consuma birra tutti i giorni": 4.8, "consuma birra pi\u00f9 raramente": 37.3, "consuma birra solo stagionalmente": 11, "tot vino e birra": 115.4}, {"Anno": null, "Territorio": "Centro", "persone di 11 anni e pi\u00f9 che consumano vino": 57.8, "pi\u00f9 di mezzo litro di vino al giorno": 2.5, "1-2 bicchieri di vino al giorno": 16.9, "consuma vino pi\u00f9 raramente": 33, "persone di 11 anni e pi\u00f9 che consumano birra": 50.9, "consuma birra tutti i giorni": 5.5, "consuma birra pi\u00f9 raramente": 33.1, "consuma birra solo stagionalmente": 12.3, "tot vino e birra": 108.69999999999999}, {"Anno": null, "Territorio": "Toscana", "persone di 11 anni e pi\u00f9 che consumano vino": 59.5, "pi\u00f9 di mezzo litro di vino al giorno": 2.7, "1-2 bicchieri di vino al giorno": 19.2, "consuma vino pi\u00f9 raramente": 32.6, "persone di 11 anni e pi\u00f9 che consumano birra": 49.1, "consuma birra tutti i giorni": 5, "consuma birra pi\u00f9 raramente": 32.5, "consuma birra solo stagionalmente": 11.7, "tot vino e birra": 108.6}, {"Anno": null, "Territorio": "Umbria", "persone di 11 anni e pi\u00f9 che consumano vino": 59.8, "pi\u00f9 di mezzo litro di vino al giorno": 2.3, "1-2 bicchieri di vino al giorno": 18, "consuma vino pi\u00f9 raramente": 34.9, "persone di 11 anni e pi\u00f9 che consumano birra": 48.3, "consuma birra tutti i giorni": 3.8, "consuma birra pi\u00f9 raramente": 29.8, "consuma birra solo stagionalmente": 14.7, "tot vino e birra": 108.1}, {"Anno": null, "Territorio": "Marche", "persone di 11 anni e pi\u00f9 che consumano vino": 57.9, "pi\u00f9 di mezzo litro di vino al giorno": 3, "1-2 bicchieri di vino al giorno": 18.8, "consuma vino pi\u00f9 raramente": 30.9, "persone di 11 anni e pi\u00f9 che consumano birra": 51.2, "consuma birra tutti i giorni": 6.2, "consuma birra pi\u00f9 raramente": 32.9, "consuma birra solo stagionalmente": 12.1, "tot vino e birra": 109.1}, {"Anno": null, "Territorio": "Lazio", "persone di 11 anni e pi\u00f9 che consumano vino": 56.4, "pi\u00f9 di mezzo litro di vino al giorno": 2.2, "1-2 bicchieri di vino al giorno": 14.7, "consuma vino pi\u00f9 raramente": 33.5, "persone di 11 anni e pi\u00f9 che consumano birra": 52.3, "consuma birra tutti i giorni": 6, "consuma birra pi\u00f9 raramente": 34, "consuma birra solo stagionalmente": 12.3, "tot vino e birra": 108.69999999999999}, {"Anno": null, "Territorio": "Mezzogiorno", "persone di 11 anni e pi\u00f9 che consumano vino": 48.2, "pi\u00f9 di mezzo litro di vino al giorno": 1.4, "1-2 bicchieri di vino al giorno": 12.1, "consuma vino pi\u00f9 raramente": 28.4, "persone di 11 anni e pi\u00f9 che consumano birra": 49.9, "consuma birra tutti i giorni": 5.6, "consuma birra pi\u00f9 raramente": 30.5, "consuma birra solo stagionalmente": 13.8, "tot vino e birra": 98.1}, {"Anno": null, "Territorio": "Sud", "persone di 11 anni e pi\u00f9 che consumano vino": 49.9, "pi\u00f9 di mezzo litro di vino al giorno": 1.6, "1-2 bicchieri di vino al giorno": 12.7, "consuma vino pi\u00f9 raramente": 29.8, "persone di 11 anni e pi\u00f9 che consumano birra": 50.9, "consuma birra tutti i giorni": 5.6, "consuma birra pi\u00f9 raramente": 32.7, "consuma birra solo stagionalmente": 12.6, "tot vino e birra": 100.8}, {"Anno": null, "Territorio": "Abruzzo", "persone di 11 anni e pi\u00f9 che consumano vino": 54.6, "pi\u00f9 di mezzo litro di vino al giorno": 1.6, "1-2 bicchieri di vino al giorno": 14, "consuma vino pi\u00f9 raramente": 31.7, "persone di 11 anni e pi\u00f9 che consumano birra": 56.3, "consuma birra tutti i giorni": 5.4, "consuma birra pi\u00f9 raramente": 34.2, "consuma birra solo stagionalmente": 16.7, "tot vino e birra": 110.9}, {"Anno": null, "Territorio": "Molise", "persone di 11 anni e pi\u00f9 che consumano vino": 52.9, "pi\u00f9 di mezzo litro di vino al giorno": 2.2, "1-2 bicchieri di vino al giorno": 16.6, "consuma vino pi\u00f9 raramente": 27.4, "persone di 11 anni e pi\u00f9 che consumano birra": 53.7, "consuma birra tutti i giorni": 6.8, "consuma birra pi\u00f9 raramente": 32.9, "consuma birra solo stagionalmente": 14, "tot vino e birra": 106.6}, {"Anno": null, "Territorio": "Campania", "persone di 11 anni e pi\u00f9 che consumano vino": 53.1, "pi\u00f9 di mezzo litro di vino al giorno": 1.1, "1-2 bicchieri di vino al giorno": 12.4, "consuma vino pi\u00f9 raramente": 33.7, "persone di 11 anni e pi\u00f9 che consumano birra": 52.5, "consuma birra tutti i giorni": 5.3, "consuma birra pi\u00f9 raramente": 34.9, "consuma birra solo stagionalmente": 12.3, "tot vino e birra": 105.6}, {"Anno": null, "Territorio": "Puglia", "persone di 11 anni e pi\u00f9 che consumano vino": 45.9, "pi\u00f9 di mezzo litro di vino al giorno": 1.6, "1-2 bicchieri di vino al giorno": 12.4, "consuma vino pi\u00f9 raramente": 27.4, "persone di 11 anni e pi\u00f9 che consumano birra": 48.3, "consuma birra tutti i giorni": 5.2, "consuma birra pi\u00f9 raramente": 32.6, "consuma birra solo stagionalmente": 10.5, "tot vino e birra": 94.19999999999999}, {"Anno": null, "Territorio": "Basilicata", "persone di 11 anni e pi\u00f9 che consumano vino": 49.7, "pi\u00f9 di mezzo litro di vino al giorno": 2.6, "1-2 bicchieri di vino al giorno": 15.2, "consuma vino pi\u00f9 raramente": 26.4, "persone di 11 anni e pi\u00f9 che consumano birra": 46.4, "consuma birra tutti i giorni": 6.7, "consuma birra pi\u00f9 raramente": 29.3, "consuma birra solo stagionalmente": 10.5, "tot vino e birra": 96.1}, {"Anno": null, "Territorio": "Calabria", "persone di 11 anni e pi\u00f9 che consumano vino": 45, "pi\u00f9 di mezzo litro di vino al giorno": 2.4, "1-2 bicchieri di vino al giorno": 11.7, "consuma vino pi\u00f9 raramente": 23.3, "persone di 11 anni e pi\u00f9 che consumano birra": 48.6, "consuma birra tutti i giorni": 6.8, "consuma birra pi\u00f9 raramente": 26.6, "consuma birra solo stagionalmente": 15.2, "tot vino e birra": 93.6}, {"Anno": null, "Territorio": "Isole", "persone di 11 anni e pi\u00f9 che consumano vino": 44.7, "pi\u00f9 di mezzo litro di vino al giorno": 1.1, "1-2 bicchieri di vino al giorno": 10.8, "consuma vino pi\u00f9 raramente": 25.3, "persone di 11 anni e pi\u00f9 che consumano birra": 47.8, "consuma birra tutti i giorni": 5.5, "consuma birra pi\u00f9 raramente": 25.9, "consuma birra solo stagionalmente": 16.4, "tot vino e birra": 92.5}, {"Anno": null, "Territorio": "Sicilia", "persone di 11 anni e pi\u00f9 che consumano vino": 44.5, "pi\u00f9 di mezzo litro di vino al giorno": 1, "1-2 bicchieri di vino al giorno": 10.4, "consuma vino pi\u00f9 raramente": 25.1, "persone di 11 anni e pi\u00f9 che consumano birra": 48.1, "consuma birra tutti i giorni": 4.3, "consuma birra pi\u00f9 raramente": 25.5, "consuma birra solo stagionalmente": 18.2, "tot vino e birra": 92.6}, {"Anno": null, "Territorio": "Sardegna", "persone di 11 anni e pi\u00f9 che consumano vino": 45.5, "pi\u00f9 di mezzo litro di vino al giorno": 1.5, "1-2 bicchieri di vino al giorno": 11.9, "consuma vino pi\u00f9 raramente": 26, "persone di 11 anni e pi\u00f9 che consumano birra": 47.1, "consuma birra tutti i giorni": 8.9, "consuma birra pi\u00f9 raramente": 27, "consuma birra solo stagionalmente": 11.2, "tot vino e birra": 92.6}, {"Anno": null, "Territorio": "  centro area metropolitana", "persone di 11 anni e pi\u00f9 che consumano vino": 58.7, "pi\u00f9 di mezzo litro di vino al giorno": 1.7, "1-2 bicchieri di vino al giorno": 15.2, "consuma vino pi\u00f9 raramente": 35.9, "persone di 11 anni e pi\u00f9 che consumano birra": 54.4, "consuma birra tutti i giorni": 6, "consuma birra pi\u00f9 raramente": 35.3, "consuma birra solo stagionalmente": 13.2, "tot vino e birra": 113.1}, {"Anno": null, "Territorio": "  periferia area metropolitana", "persone di 11 anni e pi\u00f9 che consumano vino": 55.6, "pi\u00f9 di mezzo litro di vino al giorno": 1.7, "1-2 bicchieri di vino al giorno": 14.9, "consuma vino pi\u00f9 raramente": 33, "persone di 11 anni e pi\u00f9 che consumano birra": 52.1, "consuma birra tutti i giorni": 4.9, "consuma birra pi\u00f9 raramente": 34.1, "consuma birra solo stagionalmente": 13.1, "tot vino e birra": 107.7}, {"Anno": null, "Territorio": "  fino a 2.000 ab.", "persone di 11 anni e pi\u00f9 che consumano vino": 51.1, "pi\u00f9 di mezzo litro di vino al giorno": 3, "1-2 bicchieri di vino al giorno": 16.6, "consuma vino pi\u00f9 raramente": 27.1, "persone di 11 anni e pi\u00f9 che consumano birra": 46.2, "consuma birra tutti i giorni": 5.3, "consuma birra pi\u00f9 raramente": 30, "consuma birra solo stagionalmente": 10.9, "tot vino e birra": 97.30000000000001}, {"Anno": null, "Territorio": "  2.001 - 10.000 ab.", "persone di 11 anni e pi\u00f9 che consumano vino": 54, "pi\u00f9 di mezzo litro di vino al giorno": 2.3, "1-2 bicchieri di vino al giorno": 14.7, "consuma vino pi\u00f9 raramente": 31.3, "persone di 11 anni e pi\u00f9 che consumano birra": 51.2, "consuma birra tutti i giorni": 6, "consuma birra pi\u00f9 raramente": 33.8, "consuma birra solo stagionalmente": 11.4, "tot vino e birra": 105.2}, {"Anno": null, "Territorio": "  10.001 - 50.000 ab.", "persone di 11 anni e pi\u00f9 che consumano vino": 53.4, "pi\u00f9 di mezzo litro di vino al giorno": 1.9, "1-2 bicchieri di vino al giorno": 14.2, "consuma vino pi\u00f9 raramente": 31, "persone di 11 anni e pi\u00f9 che consumano birra": 49.8, "consuma birra tutti i giorni": 5, "consuma birra pi\u00f9 raramente": 33.1, "consuma birra solo stagionalmente": 11.7, "tot vino e birra": 103.19999999999999}, {"Anno": null, "Territorio": "  50.001 ab. e pi\u00f9", "persone di 11 anni e pi\u00f9 che consumano vino": 55.5, "pi\u00f9 di mezzo litro di vino al giorno": 2.1, "1-2 bicchieri di vino al giorno": 14, "consuma vino pi\u00f9 raramente": 33, "persone di 11 anni e pi\u00f9 che consumano birra": 51.8, "consuma birra tutti i giorni": 5.1, "consuma birra pi\u00f9 raramente": 33.6, "consuma birra solo stagionalmente": 13, "tot vino e birra": 107.3}, {"Anno": "Dati estratti il 16 mag 2023 12:04 UTC (GMT) da I.Stat", "Territorio": "2021", "persone di 11 anni e pi\u00f9 che consumano vino": "2021", "pi\u00f9 di mezzo litro di vino al giorno": "2021", "1-2 bicchieri di vino al giorno": "2021", "consuma vino pi\u00f9 raramente": "2021", "persone di 11 anni e pi\u00f9 che consumano birra": "2021", "consuma birra tutti i giorni": "2021", "consuma birra pi\u00f9 raramente": "2021", "consuma birra solo stagionalmente": "2021", "tot vino e birra": "20212021"}]}};
+                      var embedOpt = {"mode": "vega-lite"};
+                
+                      function showError(el, error){
+                          el.innerHTML = ('<div style="color:red;">'
+                                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                                          + "<p>This usually means there's a typo in your chart specification. "
+                                          + "See the javascript console for the full traceback.</p>"
+                                          + '</div>');
+                          throw error;
+                      }
+                      const el = document.getElementById('vis');
+                      vegaEmbed("#vis2", spec, embedOpt)
+                        .catch(error => showError(el, error));
+                    })(vegaEmbed);   
+                </script>
+
+            </div>
+                  
+            <p>La prevenzione dell'abuso di alcol e la riduzione degli incidenti stradali richiedono sforzi congiunti da parte delle famiglie, delle scuole, delle istituzioni e della società nel suo insieme. 
+            È fondamentale fornire ai giovani informazioni accurate sugli effetti dannosi dell'alcol, educarli riguardo alle decisioni responsabili e promuovere alternative salutari e gratificanti per gestire lo stress e le pressioni della vita.
+            Inoltre, le leggi devono essere rigorosamente applicate per punire l'abuso di alcol e guida in stato di ebbrezza. Campagne di sensibilizzazione, controlli e programmi di riabilitazione possono contribuire a modificare le percezioni e i comportamenti dei giovani riguardo all'abuso di alcol.</p>
+
+        </section>
+
+        <section id = "droghe">
+            <h2>Quanto sono diffuse le dipendenze da droghe?</h2>
+            <p>Seppur non sia la causa principale delle morti dei giovani, nel 2020 se ne registrano infatti solamente <b>25</b>, la dipendenza da droghe rimane un problema largamente diffuso tra i giovani.
+                <br/>Gli esperti descrivono il fenomeno come in continuo aumento e in grado di arrivare a coinvolgere anche ragazzini tra gli 11 e 14 anni. 
+                Sono inoltre pochissimi i giovani che vanno nei centri spontaneamente.
+            <br></br>Le sostanze stupefacenti sono tra i principali fattori di rischi per gli <b>incidenti stradali</b>. Nel 2020 il 3% di questi ultimi è stato causato dall'uso di droghe.
+            <br/>Dai dati sulle morti nel 2020 emerge che una nette maggioranza è relativa a <b>uomini</b>.
+            </p>
+            <img src = "./grafici/droghepersesso.svg" style = "width:38%; margin-left: 26%;" />
+        </section>
+
+        <section id = "suicidi">
+            <h2>Suicidi e autolesione intenzionale: la salute mentale dei giovani</h2>
+            <p>Il fenomeno dei suicidi tra giovani rappresenta una triste realtà, essendo una delle principali cause di morte prematura in questa fascia d'età. 
+            <br/>Mentre la gioventù dovrebbe essere un periodo di scoperta, crescita e speranza, per molti giovani si trasforma in un'esperienza travagliata e dolorosa a causa di problemi di salute mentale.
+            I giovani affrontano una vasta gamma di pressioni, tra cui aspettative scolastiche, competizione sociale, problemi familiari e il costante utilizzo dei social media, che possono contribuire allo sviluppo di disturbi mentali come <b>ansia</b> e <b>depressione</b>. 
+            La mancanza di un sostegno adeguato può peggiorare la situazione, lasciando i giovani vulnerabili e incapaci di far fronte a tali sfide.
+            <br/>Purtroppo, quando la sofferenza diventa insopportabile, alcuni giovani giungono a considerare il suicidio come l'unica via d'uscita dai loro tormenti interiori. 
+            <br/>Nel 2020 il numero di suicidi è stato di: <b style = "font-size: 24px;">465</b>.
+            <br/>La prevenzione del suicidio tra i giovani richiede uno sforzo collettivo e costante. Governi, istituzioni, famiglie e comunità devono unire le forze per ridurre il tasso di suicidi e fornire una rete di sostegno solida e inclusiva per tutti i giovani in difficoltà.            </p>
+        </section>
+
+        <section id = "fumo">
+            <h2>Abitudine al fumo: quanti giovani fumano e quali sono le conseguenze?</h2>
+            <table id = "table_fumo">
+                <tr>
+                    <td class="colonne_fumo">
+                        <h3 style = "color:#206792;">18 %</h3>
+                        <p>Giovani con abitudine al fumo nel 2022</p> 
+                    </td>
+                    <td class="colonne_fumo" id = "colonnafumo2">
+                        <h3 style = "color: #206792;">25-34</h3>
+                        <p>La classe d'età più coinvolta</p> 
+                    </td>
+                    <td class="colonne_fumo">
+                        <h3 style = "color:#206792;"> 7.75</h3>
+                        <p>Sigarette medie al giorno</p>
+                    </td>
+                </tr>
+            </table>
+            <p>Il fumo nei giovani è un problema diffuso che comporta gravi conseguenze per la salute sia a breve che a lungo termine. 
+                <br/>Le conseguenze del fumo sui giovani sono molteplici. In primo luogo, il fumo danneggia il <b>sistema respiratorio</b>: è infatti il principale fattore di rischio per malattie respiratorie non neoplastiche, come la broncopneumopatia cronica sotruttiva, asma e infezioni respiratorie ricorrenti.
+                <br/>Oltre agli effetti sul sistema respiratorio, il fumo nei giovani aumenta il rischio di sviluppare <b>malattie cardiache</b> precoci. Il tabacco contiene sostanze chimiche che danneggiano i vasi sanguigni e aumentano la pressione sanguigna, aumentando così il rischio di infarto e ictus.
+                <br/>Il fumo nei giovani è anche associato a un rischio maggiore di sviluppare vari tipi di <b>cancro</b>, come il cancro ai polmoni, al cavo orale e alla gola, all'esofago e alla vescica. Queste forme di cancro possono avere conseguenze devastanti sulla vita di una persona giovane, limitando le loro opportunità future e compromettendo la loro salute generale.
+                <br/>Oltre alle conseguenze fisiche, il fumo può anche influire negativamente sul benessere psicologico dei giovani. Alcuni studi hanno dimostrato che i giovani fumatori hanno maggiori probabilità di sviluppare disturbi dell'umore, come l'ansia e la depressione. Inoltre, il fumo può creare dipendenza dalla nicotina, rendendo difficile smettere di fumare una volta che l'abitudine si è stabilita.
+                <br></br>Per combattere il problema del fumo tra i giovani, è essenziale fornire informazioni accurate sugli effetti negativi del fumo sulla salute. Programmi di prevenzione e campagne di sensibilizzazione possono aiutare a educare i giovani sui rischi del fumo e a promuovere stili di vita sani.
+                <br></br>La maggior parte dei giovani fuma 5 sigarette al giorno, ma la media giornaliera è di ben <b id = "mediaFumo">7.75</b>.
+            </p>
+            <div id="visIT2" style = "margin-top: 2%;"></div>
+            <script>
+                (function(vegaEmbed) {
+                  var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"grid": false, "labelFontSize": 15, "titleFontSize": 14}, "facet": {"spacing": 10}, "title": {"fontSize": 18, "offset": 30}}, "data": {"name": "data-ca04aaaa4eda1ca6f5856931007d5a38"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Categoria", "legend": null, "scale": {"range": ["lightgrey", "lightgrey", "#206792"]}, "type": "nominal"}, "tooltip": {"field": "Somma", "type": "quantitative"}, "x": {"axis": {"labelAngle": 0}, "field": "Categoria", "title": "", "type": "nominal"}, "y": {"field": "Somma", "title": "", "type": "quantitative"}}, "height": 300, "title": {"text": ["Numero di sigarette fumate dai giovani (2022)"], "subtitle": ["Per 100 persone con le stesse caratteristiche"], "color": "black", "subtitleColor": "grey", "subtitleFontSize": 16}, "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-ca04aaaa4eda1ca6f5856931007d5a38": [{"Categoria": "fino a 5 sigarette", "Somma": 174}, {"Categoria": "da 6 a 10 sigarette", "Somma": 139}, {"Categoria": "da 11 a 20 sigarette", "Somma": 77}, {"Categoria": "oltre 20 sigarette", "Somma": 3}]}};
+                  var embedOpt = {"mode": "vega-lite"};
+            
+                  function showError(el, error){
+                      el.innerHTML = ('<div style="color:red;">'
+                                      + '<p>JavaScript Error: ' + error.message + '</p>'
+                                      + "<p>This usually means there's a typo in your chart specification. "
+                                      + "See the javascript console for the full traceback.</p>"
+                                      + '</div>');
+                      throw error;
+                  }
+                  const el = document.getElementById('vis');
+                  vegaEmbed("#visIT2", spec, embedOpt)
+                    .catch(error => showError(el, error));
+                })(vegaEmbed);
+            
+              </script>
+        </section>
+
+        <section id = "stile_alimentare">
+            <h2>Stile alimentare e attività fisica: i rischi dell'obesità</h2>
+            <p>Una corretta alimentazione e l'attività fisica sono elementi imprescindibili della salute dell'individuo.
+                <br/>Sovrappeso e obesità sono condizioni strettamente legate al rischio cardiovascolare. 
+                I principali fattori di rischio cardiovascolare (pressione arteriosa, lipidi ematici e glicemia) sono infatti influenzati dall'eccesso di massa corporea e la perdita di peso (e dunque una riduzione dell'indice di massa corporea) influisce positivamente sui livelli di questi fattori, 
+                diminuendo il pericolo di andare incontro a eventi cardiovascolari. 
+                <br></br> Tra i giovani comunque le percentuali sul consumo abituale di alimenti non scoraggiano:
+                </p>
+                <table id = "tableIT">
+                    <tr>
+                        <td class="colonneIT">
+                            <img src = "./img/bread.jpg" alt ="icona siti"/>
+                            <h3 style = "color:green;">il 76 %</h3>
+                            <p>Consuma <b>pane o pasta</b> almeno una volta al giorno. 
+                            <br/>I cairboidrati dovrebbero essere consumati ad ogni pasto, 4-5 volte al giorno.</p>
+                        </td>
+                        <td class="colonneIT">
+                            <img src = "./img/frutta.jpg" alt ="icona siti"/>
+                            <h3 style = "color:green;">il 70 %</h3>
+                            <p>Consuma <b>frutta, vertura o ortaggi</b> almeno una volta al giorno. 
+                            <br/>Questi alimenti possono essere consumati dalle 2 alle 3 volte al giorno, scegliendone di tutti i colori e variando spesso.</p>
+                        </td>
+                        <td class="colonneIT">
+                            <img src = "./img/uovo.jpg" alt ="icona siti" style = "width:14%;"/>
+                            <h3 style = "color:green;"> il 68 %</h3>
+                            <p>Consuma <b>uova</b> almeno qualche volta alla settimana. 
+                                <br/>Le uova vanno limitate a 1-2 a settimana perché hanno un elevato contenuto di colesterolo.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="colonneIT" id="colonnaIT2">
+                            <img src = "./img/pollo.jpg" alt ="icona siti"/>
+                            <h3 style = "color:green;"> l'83 %</h3>
+                            <p>Consuma <b>carni bianche</b> almeno una volta a settimana.
+                                <br/>Le carni magre (pollo, tacchino, vitello) sono da preferire e consumare 3-4 volte a settimana, eventualmente da sostituire una volta con affettati o insaccati.
+                            <br/>
+                            </p>
+                        </td>
+                     
+                        <td class="colonneIT">
+                            <img src = "./img/pesce.jpg" alt ="icona siti"/>
+                            <h3 style = "color:#cc0000;"> il 58 %</h3>
+                            <p>Consuma <b>pesce</b> almeno una volta alla settimana.
+                            <br/>Il consumo di pesce consigliato è di 3 volte alla settimana, da preferire quello azzurro ricco di Omega 3.</p>
+                        </td>
+                        <td class="colonneIT" id="colonnaIT2">
+                            <img src = "./img/latte.jpg" alt ="icona siti" style = "width:12%;"/>
+                            <h3 style = "color:#cc0000;">il 45 %</h3>
+                            <p>Consuma <b>latte</b> almeno una volta al giorno. 
+                            <br/>Latte e yogurt, ricchi di proteine e vitamine, andrebbero assunti 2/3 al giorno. I formaggi invece 2-3 volte a settimana come secondo al posto di uova o carne.
+                            </p>
+                        </td>
+                 
+                    </tr>
+                </table>
+        </section>
+
+        
+        <footer id="footer" class="grid-container">
+            <div class = "grid-item">
+                <p>Data Journalism, Università di Pisa<br> 
+                Laurea Magistrale in Informatica Umanistica<br>
+                Anno Accademico 2022/2023<br>
+                <br>Sofia Capone<br>Arianna Di Serio
+                </p>
+            </div>
+            <div class= "grid-item">
+                <h3>Fonti</h3>
+                <p>
+                    <a href="https://m4.ti.ch/fileadmin/DECS/DS/Rivista_scuola_ticinese/ST_n.274/ST_274_Gianinazzi_Quaglia_Inderwildi_Bonivento_Lo_stress.pdf">Gianinazzi, Andrea. Quaglia, Jacqueline. Inderwildi Bonivento, Laura. <i>Lo stress: un fattore di rischio tra i giovani</i></a><br/>
+                    <a href="https://www.humanitas.it/news/sintomi-dello-stress/#:~:text=Uno%20stress%20intenso%2C%20duraturo%20o,sintomi%20o%20patologie%20gi%C3%A0%20presenti">Humanitas | Sintomi dello stress</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href="https://www.humanitas.it/news/sonno-perche-e-importante-dormire-bene/#:~:text=I%20disturbi%20del%20sonno%2C%20infatti,problematiche%20di%20salute%20pi%C3%B9%20severe">Humanitas | Sonno: perché è importante dormire bene</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href="https://www.istat.it/">ISTAT</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href="https://www.epicentro.iss.it/alcol/epidemiologia-monitoraggio-2020">Istituto Superiore di Sanità | Alcol, epidemiologia e monitoraggio 2020</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href="https://www.epicentro.iss.it/alcol/alcol_ebp">Istituto Superiore di Sanità | Alcol, guida, sicurezza e salute</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href = "https://www.epicentro.iss.it/alcol_fetale/consumi-alcolici-donne">Istituto Superiore di Sanità | Consumo alcolici tra la popolazione femminile</a>. <i>Consultato il 22/07/2023</i><br/>
+                    <a href="https://www.epicentro.iss.it/ben/2021/3/fumo-alcol-adolescenti-hbsc">Istituto Superiore di Sanità | Fumo e alcol tra gli adolescenti</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href= "https://www.epicentro.iss.it/stradale/#:~:text=La%20grande%20maggioranza%20degli%20incidenti,di%20alcol%20e%20sostanze%20stupefacenti">Istituto Superiore di Sanità | Incidenti stradali</a>. <i>Consultato il 22/07/2023</i><br/>
+                    <a href="https://www.epicentro.iss.it/piano_prevenzione/obesita">Istituto Superiore di Sanità | Sorveglianza e prevenzione dell'obesità</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href = "https://www.salute.gov.it/portale/alcol/dettaglioNotizieAlcol.jsp?lingua=italiano&menu=notizie&p=dalministero&id=5478">Ministero della Salute | Alchol Prevention Day</a>. <i>Consultato il 10/07/2023</i>. </br>
+                    <a href = "https://www.salute.gov.it/portale/donna/dettaglioContenutiDonna.jsp?lingua=italiano&id=2350&area=Salute+donna&menu=prevenzione">Ministero della Salute | Salute della donna</a>. <i>Consultato il 22/07/2023</i><br/>
+                    <a href="https://www.politicheantidroga.gov.it/it/attivita/attivita-e-progetti/le-pubblicazioni/cervello-mente-e-droghe/ ">Politiche antidroga.</a><i> Consultato il 10/07/2023</i>.
+                    
+                </p>
+            </div>
+        </footer>
+</body>
+</html>

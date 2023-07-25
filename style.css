@@ -1,0 +1,676 @@
+/** BODY **/
+body {
+	font-family: Open Sans, sans-serif;
+	padding:0;
+	margin:0;
+	height: 100%;
+	width:100%;
+	font-size: 16px;
+}
+/** NAV **/
+section{
+	margin-top: 0;
+}
+#navbar {
+    color: white;
+    font-size: 90%;
+    margin: auto;
+	margin-top: 0;
+    text-align:center;
+    text-transform: uppercase;
+    line-height: 2;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: #206792; 
+    position:fixed;
+    width:100%;
+    z-index:1;
+	height: 60px;
+}
+.navelement {
+  word-break: keep-all;
+  display: inline-block;
+}
+.navelement a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    margin: auto;
+    padding: 8px 12px;
+    text-decoration: none;
+	margin-top: 3%;
+}
+.navelement a:hover {
+	text-shadow: 1px 1px 4px black;
+}
+#navbar a.activeS{
+	font-weight: bold;
+}
+/** MENU MOBILE **/
+.mobile-container {
+	display:none;
+	height: 60px;
+	color: black;
+	border-radius: 10px;
+	margin-top:0;
+	margin-bottom:0%;
+}
+.topnav {
+	overflow: hidden;
+	background-color: #206792;
+	position: relative;
+}
+.topnav #myLinks {
+	display: none;
+}
+.topnav a {
+	color: white;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 15px;
+	display: block;
+}
+.topnav a.icon {
+	background: black;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height:20px;
+	width:50px;
+}
+.topnav a:hover {
+	background-color: white;
+	color: black;
+}
+.active {
+	background-color: rgba(32, 103, 146, 0.2);
+	color: white;
+}
+
+/**HEADER**/
+header {
+	width:90%;
+	padding-top: 8%;
+	height: 300px;
+	padding-left: 10%;
+	display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+header div {
+	width:40%;
+	margin-left: 0;
+	margin-right: 10px;
+}
+header h1{
+	color:#206792;
+	font-size: 40px;
+}
+header p {
+	font-size: 20px;
+}
+.button {
+	width:11%;
+	height: 12%;
+	background-color: #206792;
+	color: white;
+	border: none;
+	border-radius: 20px;
+	text-align: center;
+	padding: 10px 10px;
+	cursor:pointer;
+	text-decoration: none;	
+	vertical-align: center;
+	margin-top: 15%;
+	position: relative;
+}
+header img{
+	width:38%;
+	margin-left: 8%;
+}
+.arrow {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+}
+.button:hover{
+	opacity: 0.8;
+}
+
+/**HOMEPAGE SEZIONI**/
+h1 + p{
+	line-height:1.3em;
+}
+h2{
+	font-size: 2em;
+	color:#206792;
+}
+b {
+	color: #2e93d1;
+}
+#sezione1, #sezione2, #sezione3, #sezione4, #d2, #sezione1_2{
+	width: 80%;
+	padding-left: 10%;
+}
+#sezione1{
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+#sezione1 h3{
+	font-size: 1.5em;
+	margin-top: -15px;
+}
+#sezione1 p {
+	margin-top: -10px;
+}
+#index{
+	background-color:rgba(32, 103, 146, 0.3);
+	width: 100%;
+	height: 300px;
+	display: flex;
+  	justify-content: center; 
+  	gap: 8%; 
+	padding-top: 5%;
+	padding-bottom: 10%;
+}
+.index {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 12px;
+	border: none;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 180px;
+	border-radius: 10px;
+	width:12%;
+	cursor: pointer;
+}
+#el1{
+	background-image: url(./img/italia.jpg);
+}
+#el2{
+	background-image: url(./img/confronto.png);
+}
+#el3{
+	background-image: url(./img/sfondo.svg);
+	background-size: contain;
+}
+.index:hover{
+	
+	box-shadow: 0px 0px 8px #191919;
+}
+.button-text{
+	margin-top: 160%;
+	color: black;
+	width: 100%;
+	font-size: 18px;
+}
+.elenco{
+	counter-reset:li;
+	margin-left:0;
+	padding-left:0
+  }
+  .elenco li{
+  	position:relative;
+  	margin:0 0 20px 2em !important;
+  	padding:4px 8px !important;
+  	list-style:none;
+}
+.elenco li.level1:before{
+	content:counter(li);
+	counter-increment:li;
+	position:absolute;   top:-12px;
+	left:-39px;
+	font-family:Georgia; /* Famiglia di Font */
+	font-size:40px; /* Dimensione dei numeri */
+	width:34px;
+	margin:0 0 10px 0;
+	padding:4px !important;
+	color:#191919; /* Colore dei numeri */
+	text-align:center; 
+}
+.elenco li ol {
+	margin-left: -5%;
+	margin-bottom: -2%;
+}
+.elenco li ol li {
+	list-style: disc;
+}
+#sezione1_1 {
+	margin-bottom: 4%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	background-color: rgba(32, 103, 146, 0.3);
+}
+#sezione1_1 h2{
+	color: black;
+	text-align: center;
+}
+#sezione1_2 #metodo {
+	background-image: url("./img/illustrazione1.jpg");
+	background-size: cover;
+	height: 250px;
+	background-position: top;
+	margin-bottom: 1%;
+}
+#sezione1_2{
+	margin-bottom: 6%;
+}
+#grafica_metodo {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 3%;
+}
+#sezione1_1{
+	padding-bottom:1%;
+	padding-top:1%;
+	margin-top:2%;
+}
+table{
+	text-align:center;
+	width:90%;
+	margin-left:5%;
+	margin-bottom:5%;
+	border-spacing: 20px;
+}
+.colonne {
+	width:8%;
+	padding:0%;
+	padding-bottom:0%;
+	padding-top:0%;
+	padding-right: 2%;
+	background-color:white;
+	border-radius:7px;
+	vertical-align:top;
+}
+table tr .colonne ul li{
+	text-align: justify;
+	padding-bottom: 2%;
+}
+#colonna2, #colonna3{
+	margin-left:5%;
+}
+.colonne p {
+	padding-left: 5%;
+	padding-right:5%;
+	text-align: left;
+}
+.colonne img{
+	width:15%;
+	margin-top: 2%;
+}
+#sezione1_1 li {
+	list-style-type: circle;
+}
+
+/** PAGINA ITALIA SEZIONI **/
+.buttonIT {
+	width:13%;
+	height: 12%;
+	background-color: #206792;
+	color: white;
+	border: none;
+	border-radius: 20px;
+	text-align: center;
+	padding: 10px 10px;
+	cursor:pointer;
+	text-decoration: none;	
+	vertical-align: center;
+	margin-top: 8%;
+	margin-left: 5%;
+	position: relative;
+}
+#cause_d, #alcol, #fumo, #droghe, #incidenti, #stile_alimentare, #suicidi {
+	width: 80%;
+	margin-left: 10%;
+}
+#c2020 {
+	width:90%;
+	margin-left: 5%;
+}
+.grid-containerIT{
+	display: inline-grid;
+	grid-template-columns: 45% 50%;
+	gap: 5%;
+	margin-top: 2%;
+}
+.grid-containerIT2{
+	display: inline-grid;
+	grid-template-columns: 48% 48%;
+	gap: 2%;
+}
+.grid-containerIT img {
+	width: 100%;
+}
+.grid-containerIT2 img {
+	width: 80%;
+}
+#fumo, #incidenti, #stile_alimentare, #alcol {
+	margin-top: 5%;
+}
+#droghe, #suicidi {
+	margin-top: 4%;
+}
+#fumo img {
+	width: 60%;
+	margin-left: 20%;
+}
+#causerid {
+	width:80%;
+	margin-left: 10%;
+}
+#headerIT{
+	width:90%;
+	padding-top: 5%;
+}
+#mappe {
+	margin-top: 3%;
+	width: 100%;
+	padding-left: 0%;
+	display: inline-grid;
+	grid-template-columns: 40% 40%;
+	gap: 10%;
+}
+#visIT2{
+	margin-left: 20%;
+}
+#visIT{
+	margin-left: 5%;
+}
+.colonneIT {
+	width:25%;
+	padding:0%;
+	padding-bottom:0%;
+	padding-top:0%;
+	background-color:white;
+	border-radius:7px;
+	vertical-align:top;
+	border: solid 2px grey;
+	box-shadow: 0px 0px 10px grey;
+	
+}
+#colonnaIT2, #colonnaIT3{
+	margin-left:5%;
+}
+.colonneIT p {
+	padding-left: 5%;
+	padding-right:5%;
+	text-align: left;
+}
+.colonneIT img{
+	width:20%;
+	margin-top: 2%;
+}
+.colonneIT h3{
+	font-size: 30px;
+}
+#tableIT {
+	width:100%;
+	margin: 0%;
+}
+#vis3 {
+	margin-left: 25%;
+}
+#cause_d a {
+	text-decoration: none;
+}
+#menuIT {
+	width: 90%;
+	margin-left: 10%;
+}
+.btnIT {
+	width:13%;
+	height: 80px;
+	background-color: white;
+	color: black;
+	font-size: 16px;
+	border: solid 2px;
+	border-radius: 10px;
+	text-align: center;
+	padding: 10px 10px;
+	cursor:pointer;
+	text-decoration: none;	
+	vertical-align: center;
+	margin-top: 6%;
+	margin-left: 12%;
+	position: relative; 
+	border-color: #206792;
+}
+#table_fumo {
+	width: 95%;
+	margin: 0%;
+}
+#table_fumo h3{
+	font-size: 30px;
+}
+
+/*EUROPA*/
+#cause_decessi_spagna, #cause_decessi_spagna2, #cause_decessi_spagna3, #cause_decessi_spagna4, #cause_decessi_spagna5{
+	width: 80%;
+	padding-left: 10%;
+	margin-top: 5%;
+}
+.highlight{
+	font-size: 3em;
+	line-height: 1.5em;
+	font-weight: 700;
+	color: #2e93d1;
+}
+.highlight-2{
+	font-size: 1.4em;
+	line-height: 1.3em;
+	font-weight: 600;
+	color: #2e93d1;
+}
+.highlight-3{
+	font-size: 1.1em;
+	line-height: 1.3em;
+	font-weight: 600;
+	color: #2e93d1;
+}
+#cause_decessi_spagna .grid-containerSP{
+	display: inline-grid;
+	grid-template-columns: 45% 45%;
+	gap: 10%;
+}
+.grid-containerS0{
+	width:100%;
+	margin-left: -12%;
+	margin-top: 3%;
+	padding: 0%;
+	display: inline-grid;
+	grid-template-columns: 50% 50%;
+	gap:8%
+}
+#cause_decessi_spagna img, #cause_decessi_spagna2 img{
+	width:100%;
+	margin-left: -10%;
+	margin-top: 5%;
+}
+.grid-containerS1{
+	display: inline-grid;
+	grid-template-columns: 45% 45%;
+	gap: 2%;
+}
+.grid-itemS1{
+	width:100%;
+}
+.grid-containerS2, .grid-containerS3 {
+	display: inline-grid;
+	grid-template-columns: 100% 100%;
+	gap:10%;
+}
+.grid-itemsS2, .grid-itemsS3{
+	width:100%; 
+	margin-left: 15%; 
+	margin-top: 2%;
+}
+
+
+/** PAGINE NEL TEMPO SEZIONI **/
+.buttonN{
+	width:13%;
+	height: 5%;
+	background-color: #206792;
+	color: white;
+	border: none;
+	border-radius: 20px;
+	text-align: center;
+	padding: 10px 10px;
+	cursor:pointer;
+	text-decoration: none;	
+	vertical-align: center;
+	position: absolute;
+	margin-top: 20%;
+}
+.headerT{
+	padding-top: 5%;
+	height: 400px;
+	background-image: url(./img/sfondo.svg);
+	background-size: 40%;
+	background-position-x: 90%;
+	background-position-y: 120%;
+	background-repeat: no-repeat;
+	margin-bottom: 8%;
+}
+
+#incidenti_stradali, #abuso_alcol, #dipendenza_droghe, #cause_decessi{
+	width: 80%;
+	padding-left: 10%;
+	margin-top: 5%;
+}
+#incidenti_stradali h2{margin-bottom: 4%;}
+.grid-container1, .grid-container3{
+	display: inline-grid;
+	grid-template-columns: 45% 40%;
+	gap: 10%;
+}
+.grid-container2 {
+	display: inline-grid;
+	grid-template-columns: 30% 40% 40%;
+	gap: 1%;
+}
+.grid-container2 p.grid-item2{
+	margin-right: 20%;
+	margin-top: 0%;
+}
+.grid-container3{margin-top: 2%;}
+.grid-item2 img, .grid-item3 img{
+	width:90%;
+}
+#vis2020, #vis2015{
+	margin-left: 8%;
+	margin-top: 2%;
+}
+#vis2020{
+	margin-top: 8%;
+	margin-bottom: 5%;
+}
+#dipendenza_droghe{
+	margin-bottom: 2%;
+}
+
+#sez1 {
+	margin-top: 5%;
+	background-color: rgba(32, 103, 146, 0.2);
+	padding-top: 1%;
+	padding-bottom: 5%;
+}
+
+
+
+
+/** FOOTER **/
+#footer {
+	background-color:  #091d2a;
+	width: 95%;
+	height: 400px;
+	text-align: left;
+	margin-bottom:0%;
+	margin-top:10%;
+	font-size:0.9em;
+	color:white;
+    padding-top: 2%;
+    padding-left: 5%;
+}
+
+#footer p{
+  vertical-align: center;
+  line-height: 25px;
+}
+.grid-container {
+	display: inline-grid;
+	grid-template-columns: 35% 60%;
+	gap: 2%;
+}
+#footer a{
+	color:white;
+	text-decoration: none;
+}
+#footer a:hover{
+	color:aqua;
+}
+#home footer{
+	margin-top: 0%;
+}
+
+/** RESPONSIVE **/
+@media (max-width: 1200px) {
+	.index{
+		width: 20%;
+		height: 55%;
+	}
+	.button-text{
+		font-size: 16px;
+		margin-top: 120%;
+	}
+}
+/** Medium devices (tablets, less than 992px) **/
+@media (max-width: 991.98px) {
+    .mobile-container {
+        display:block;
+    }
+    #navbar{
+        display: none;
+    }
+	header h1 {
+		font-size: 30px;
+	}
+	header div {
+		width: 100%;
+	}
+	.button { 
+		width:40%
+	}
+	header img {display: none;}
+	#sezione1_1 h3{
+		font-size: 15px;
+	}
+	#sezione1_1 p {
+		font-size: 12px;
+	}
+	.index{
+		width: 25%;
+		height: 50%;
+	}
+	.button-text{
+		font-size: 15px;
+		margin-top: 160%;
+	}
+	#footer {
+		height: 800px;
+	}
+}
+@media (max-width:600px){
+	.button-text{
+		margin-top: 220%;
+	}
+}

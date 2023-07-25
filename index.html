@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html lang="IT">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<script src="./script.js"></script>
+</head>
+
+<body id = "home">
+   
+    <section>
+    <ul id="navbar"> 
+        <li class="navelement"> <a href="#sezione1" class="activeS">Dati e metodologia</a></li>
+        <li class="navelement"> <a href= "./italia.html">La situazione in Italia</a></li>
+        <li class="navelement"> <a href="./europa.html">Italia ed Europa a confronto</a></li>
+        <li class="navelement"> <a href="./nel_tempo.html">L'Italia nel tempo</a></li>
+        <li class="navelement"> <a href="#footer">About</a></li>
+    </ul>
+    </section>
+
+    <div class="mobile-container">
+		<div class="topnav">
+            <a href="#" class="active">Dati e metodologia</a>
+			<div id="myLinks">
+				<a href="./italia.html">La situazione in Italia</a>
+				<a href="./europa.html">Italia ed Europa a confronto</a>
+				<a href="./nel_tempo.html">L'Italia nel tempo</a>
+				<a href="#footer">About</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+	</div>	
+
+    <header>
+        <div>
+        <h1>Le principali cause di decesso dei giovani in Italia: cosa dicono i numeri?</h1>
+        <p>Esplorando le statistiche: fattori di rischio e tendenze 
+            <br/>delle morti premature tra i giovani italiani
+        </p>
+        </div>
+        <button class = "button" onclick="scrollToSection('#sezione1')">Scopri di più<span class="arrow">&#9660;</span></button>
+        <img src = "./img/sfondoH1.png"></img>
+    </header>
+    
+
+    <section id = "sezione1">
+        <div id="d1">
+            <h2>I dati per comprendere</h2>
+            <h3>I fattori e le scelte principali che possono condurre i giovani a una morte prematura</h3>
+            <p>Tra i fattori più importanti che influenzano lo stile di vita di un individuo si inseriscono:
+                <ul class = "elenco">
+                    <li class="level1"><span class="highlight-2">Dipendenze</span>:
+                        <ol><br/>
+                        <li><span class="highlight-3">Droghe</span>: l'uso di droga interferisce con il normale funzionamento cerebrale degli individui, alterandone le percezioni, i pensieri, le azioni e la capacità di memorizzare e ricordare. <b>I danni sono ancor più significativi</b> se l'uso di droghe avviene <b>nell'età dell'adolescenza</b>, in cui il cervello è ancora in fase di maturazione. Tutte le droghe possono causare anomalie nel funzionamento neuro-psichico dell'individuo.</li>
+                        <li><span class="highlight-3">Alcol</span>: il consumo di alcolici favorisce la contrazione di <b>malattie acute e croniche cardiovascolari, tumorali e neuro-cognitive</b>, nonché un considerevole <b>aumento di peso</b>.</li>
+                        <li><span class="highlight-3">Fumo</span>: il fumo aumenta sensibilmente il rischio di contrarre <b>patologie tumorali, cardiovascolari e respiratorie</b>. Oltre a ciò, esso peggiora la resistenza fisica e la qualità del sonno.</li>
+                        </ol>
+                    </li>
+                <li class="level1"><span class="highlight-2">Dieta</span>: una dieta sana ed equilibrata è fondamentale per rimanere in salute. Ogni giorno un individuo dovrebbe mangiare almeno 3 pasti, ai quali aggiungere eventuali spuntini, facendo attenzione alla varietà, alla scelta di alimenti di qualità e di stagione e alle combinazioni fra essi.</li>
+                <li class="level1"><span class="highlight-2">Attività fisica</span>: per 'attività fisica' si intende qualsiasi movimento corporeo che richieda un dispendio energetico, non solo le attività sportive. Muoversi per almeno 30 minuti al giorno aiuta il benessere psicofisico e la prevenzione di malattie croniche.</li>
+                <li class="level1"><span class="highlight-2">Qualità del sonno</span>: i disturbi del sonno possono avere un forte impatto sulla quotidianità di che ne soffre, favorendo <b>stanchezza cronica, cali dell'attenzione e l'aumento dell'irritabilità e degli stati emotivi depressivi</b>, fino ad arrivare, con il tempo, a <b>problematiche di salute più severe</b>. Mediamente sono necessarie tra le 7 e le 8 ore di sonno per un individuo adulto, ma in alcuni casi possono essere necessarie 9–10 o, al contrario, possono bastarne solo 5-6.</li>
+                <li class="level1"><span class="highlight-2">Stress</span>: stress duraturo o non gestito può avere importanti conseguenze sulla salute, causando <b>mal di testa, fastidi allo stomaco, aumento della pressione sanguigna, dolore al petto e disturbi del sonno</b>. Lo stress può inoltre peggiorare sintomi o patologie già presenti.</li>
+            </ul>
+            </p>
+        </div>
+    </section>
+
+    <section id = "sezione1_1">
+		<h2>Incidenza di ciascun fattore sui giovani</h2>
+		<table>
+			<tr>
+                <td class="colonne" id="colonna3">
+                    <img src = "./img/drug.jpg" alt ="icona siti"/>
+					<h3>Droga</h3>
+                    <ul>
+                        <li><strong>8000 morti</strong> ogni anno in Europa a causa del consumo di droghe</li> 
+                        <li><b>L'overdose da oppiacei</b> è <b>una delle principali cause di morte</b> tra i giovani in Europa</li>
+                        <li>Aumento del rischio di <strong>morte per AIDS, violenze, incidenti e suicidi</strong></li> 
+                    </ul>					
+				</td>
+				<td class="colonne">
+					<img src = "./img/alcolicon.jpg" alt ="icona siti"/>
+					<h3>Alcol</h3>
+                    <ul>
+                        <li><strong>Quinto fattore di rischio malattia a livello globale</strong></li> 
+                        <li><strong>800 morti al giorno</strong> in Europa a causa del consumo di alcol</li>
+                        <li><b>1 morto su 4</b> appartiene alla fascia d'età compresa <b>tra i 20 e i 24 anni</b></li> 
+                        <li>Danni a <strong>pancreas, fegato, tubo digerente, sistema nervoso centrale e periferico</strong></li>
+                        <li>Disturbi come <strong>ansia o depressione</strong></li>
+                    </ul>
+				</td>
+				<td class="colonne" id="colonna2">
+                    <img src = "./img/fumo.png" alt ="icona siti"/>
+					<h3>Fumo</h3>
+                    <ul>
+                        <li><b>Compromesso sviluppo dei polmoni</b> nei giovani <b>sotto ai 20 anni</b></li>
+                        <li><b>Compromesso sviluppo del cervello</b> negli <b>adolescenti</b></li>
+                        <li>L'abitudine al fumo intrapresa nell'adolescenza spesso diventa <strong>dipendenza</strong></li>
+                    </ul>
+				</td>
+			</tr>
+			<tr>
+				<td class="colonne">
+                    <img src = "./img/mela.jpg" alt ="icona siti"/>
+					<h3>Dieta</h3>
+                    <ul>
+                        <li><strong>Sovrappeso e obesità</strong> favoriscono lo sviluppo di <strong>malattie croniche, diabete di tipo 2, osteoporosi e cancro</strong></li>
+                        <li>Nei Paesi ad alto reddito <strong>1 adolescente su 5</strong> soffre di <strong>obesità</strong></li>
+                        <li>L'obesità comporta una serie di <b>risvolti fisici e psicologici</b> con pesanti conseguenze a livello personale, specie in <b>adolescenza</b></li>
+                        <li><b>Un adolescente obeso</b> diventa spesso <b>un adulto obeso</b></li>
+                    </ul>
+				</td>
+				<td class="colonne">
+                    <img src = "./img/sport.jpg" alt ="icona siti"/>
+					<h3>Attività fisica</h3>
+                    <ul>
+                        <li>L' <b>80% dei giovani</b> nel mondo <b>non pratica sufficiente attività fisica</b></li>
+                        <li>L'attività fisica assicura un <strong>sano sviluppo mentale</strong></li>
+                        <li>Migliora <strong>il sistema cardiovascolare e muscolare, lo sviluppo osseo e il controllo del peso corporeo</strong>, con benefici che persistono nel corso dell’età adulta</li>
+                    </ul>
+                </td>
+				<td class="colonne">
+                    <img src = "./img/sonno.jpg" alt ="icona siti"/>
+					<h3>Qualità del sonno e stress</h3>
+                    <ul>
+                        <li>Il buon sonno <b>incide sulla memoria degli adolescenti</b></li>
+                        <li><b>Nei giovani</b> previene <b>problemi legati all'umore, malattie cardiovascolari e obesità</b></li>
+                        <li>Livelli di stress elevato incidono negativamente sulla salute dei giovani</li>
+                        <li><strong>La correlazione tra dipendenze e stress supera il 50% dei casi</strong></li>
+                    </ul>
+				</td>
+			</tr>
+		</table>
+	</section>
+   
+    <section id = "sezione1_2">
+        <div id = "d3">
+            <h2>I giovani, ossia?</h2>
+            <p>Secondo l'Istat, la fascia di età presa in considerazione quando si parla di giovani è quella compresa tra i <span class="highlight-3">15-34 anni</span>. 
+            <br/><strong>Rientrano</strong> infatti in questa categoria:<br/>
+            <ul>
+                <li><span class="highlight-3">Giovani</span>: 15-24 anni</li>
+                <li><span class="highlight-3">Giovani adulti</span>: 25-34 anni</li>
+            </ul>
+            <p>Ne sono <strong>esclusi</strong>:</p> 
+            <ul>
+                <li><b>Bambini</b>: 0-11 anni</li>
+                <li><b>Adulti</b>: 35-54 anni</li>
+                <li><b>Anziani</b>: 55 anni in poi</li>
+            </ul>
+            <h2>L'arco temporale</h2>
+            <p>Il periodo di tempo preso in considerazioni nei dataframe ISTAT sulle cause di decesso si protrae <span class="highlight-3">dal 2015 al 2020</span>. 
+                <br/>I restanti dataset riportano dati relativi agli anni <span class="highlight-3">2021</span> e <span class="highlight-3">2022</span>.</p>
+            <h2>Metodologia</h2>
+            <p>Il presente articolo ha come obiettivo <strong>un'analisi approfondita sulle cause principali di decesso tra i giovani in Italia</strong>, con particolare attenzione ai fattori che incidono sulla loro salute. Attraverso l'utilizzo di dati statistici provenienti dall'<strong>ISTAT</strong> (Istituto Nazionale di Statistica), sono stati esaminati diversi indicatori, tra cui <strong>le cause di morte più comuni, le abitudini relative al fumo e all'alcol, nonché lo stile alimentare</strong>, per fornire <strong>una panoramica completa basata sui dati</strong> che possa contribuire a una maggiore consapevolezza riguardo alla salute dei giovani italiani.<br/> Infine, è stato realizzato <strong>un confronto con un altro Paese dell'Unione Europea</strong> per studiare differenze e somiglianze e individuare le criticità che richiedono un intervento immediato da parte delle autorità competenti per aiutare i giovani a perseguire uno stile di vita sano ed equilibrato.
+            
+            <br/><br/>Di seguito, i <b>dataset utilizzati</b> e le <b>relative metodologie di elaborazione</b>:
+            <br></br>1. <span class="highlight-3">Dataset sulle principali cause di decesso in Italia</span>: 
+            l'ISTAT raccoglie e pubblica dati sulle cause di morte in Italia attraverso il Sistema Informativo di Mortalità (SIM). Questi dati includono informazioni dettagliate sulle cause specifiche di morte, suddivise in diverse categorie (ad esempio malattie cardiache, incidenti stradali, suicidi, ecc...). 
+            <br/>I dati sono stati analizzati relativamente ai giovani, definendo la fascia di età specifica in base alle definizioni fornite dall'ISTAT. L'arco temporale coperto va dal 2015 al 2020.
+            <br/>I dataset sono 2: <i>cause decessi per età</i> (dimensione: 27000 records ca.) e <i>cause decessi per regione</i> (dimensione: 156000 records ca.).
+            <br></br>2. <span class="highlight-3">Dataset sull'abitudine al fumo in Italia</span>:
+            per comprendere l'impatto del fumo sulla salute dei giovani sono stati utilizzati dataset relativi all'abitudine al fumo in Italia. Questi dati includono informazioni sul numero di fumatori, suddivisi per fascia d'età, genere e regione. Sono stati esaminati i dati per la fascia di età dei giovani, al fine di identificare eventuali correlazioni tra il fumo e le principali cause di morte. I dati sono relativi agli anni 2021 e 2022.
+            <br/>La dimensione del dataset è di 24 records.
+            <br></br>3. <span class="highlight-3">Dataset sull'abitudine all'alcol in Italia</span>:
+            per valutare l'influenza dell'abuso di alcol sulla salute dei giovani, sono stati considerati dati sull'abitudine all'alcol in Italia. Anche queste informazioni sono suddivise per fascia d'età, genere e regione e anche in questo caso sono stati analizzati i dati relativi ai giovani per individuare eventuali legami tra il consumo di alcol e le cause di morte più comuni. Il dataset riguarda il 2021 e 2022.
+            <br/>I dataset sono 2: <i>abitudine all'alcol per età</i> (dimensione: 25 records) e <i>abitudine all'alcol per regione</i> (dimensione: 39 records).
+            <br></br>4. <span class="highlight-3">Dataset sullo stile alimentare in Italia</span>:
+            per esaminare l'impatto dello stile alimentare sulla salute dei giovani, sono stati considerati dati relativi alle abitudini alimentari in Italia. Anche in questo caso i dati risalgono al 2021 e 2022.
+            <br/>La dimensione complessiva dei dataset è di 120 records.
+            <br></br>5. <span class="highlight-3">Dataset sulle principali cause di decesso in Spagna (fino al 2022)</span>: attraverso i dati forniti da l'Instituto Nacional de Estadística, noto con l'acronimo INE (organismo che coordina i servizi statistici della Spagna)
+            è stato sviluppato un confronto, per individuare differenze e somiglianze nelle principali cause di decesso tra i giovani italiani e spagnoli. I dati partono dal 2015 e arrivano fino al 2022.
+            <br/>La dimensione del dataset è di 340560 records.
+            <div id = "metodo"></div>
+            <br></br>L'analisi dei dati ha consentito di identificare le principali cause di morte tra i giovani italiani e di comprendere meglio i fattori che influenzano la loro salute. Le informazioni ottenute da questa ricerca potrebbero essere utili per sviluppare strategie di prevenzione mirate e per promuovere uno stile di vita sano tra i giovani. È importante sottolineare che le conclusioni tratte sono basate su dati statistici e che ulteriori studi e ricerche potrebbero essere necessari per una comprensione più approfondita delle dinamiche coinvolte nella salute giovanile in Italia.</p>
+            <img id = "grafica_metodo" src = "./img/grafica.svg"/>
+            </div>
+    </section>
+
+    <h2 style = "color: black; text-align: center;">Esplora l'indagine</h2>
+    <section id = "index">
+        <button id = "el1" class = "index" onclick="location.href='./italia.html'"><span class="button-text">La situazione in Italia</span></button>
+        <button id = "el2" class = "index" onclick="location.href='./europa.html'"><span class="button-text">Italia ed Europa a confronto</span></button>
+        <button id = "el3" class = "index" onclick="location.href='./nel_tempo.html'"><span class="button-text">L'Italia nel tempo</span></button>
+    </section>
+
+    <footer id="footer" class="grid-container">
+        <div class = "grid-item">
+            <p>Data Journalism, Università di Pisa<br> 
+            Laurea Magistrale in Informatica Umanistica<br>
+            Anno Accademico 2022/2023<br>
+            <br>Sofia Capone<br>Arianna Di Serio
+            </p>
+        </div>
+        <div class= "grid-item">
+            <h3>Fonti</h3>
+            <p>
+                <a href="https://m4.ti.ch/fileadmin/DECS/DS/Rivista_scuola_ticinese/ST_n.274/ST_274_Gianinazzi_Quaglia_Inderwildi_Bonivento_Lo_stress.pdf">Gianinazzi, Andrea. Quaglia, Jacqueline. Inderwildi Bonivento, Laura. <i>Lo stress: un fattore di rischio tra i giovani</i></a><br/>
+                <a href="https://www.humanitas.it/news/sintomi-dello-stress/#:~:text=Uno%20stress%20intenso%2C%20duraturo%20o,sintomi%20o%20patologie%20gi%C3%A0%20presenti">Humanitas | Sintomi dello stress</a>. <i>Consultato il 10/07/2023</i><br/>
+                <a href="https://www.humanitas.it/news/sonno-perche-e-importante-dormire-bene/#:~:text=I%20disturbi%20del%20sonno%2C%20infatti,problematiche%20di%20salute%20pi%C3%B9%20severe">Humanitas | Sonno: perché è importante dormire bene</a>. <i>Consultato il 10/07/2023</i><br/>
+                <a href="https://www.istat.it/">ISTAT</a>. <i>Consultato il 10/07/2023</i><br/>
+                <a href="https://www.epicentro.iss.it/alcol/epidemiologia-monitoraggio-2020">Istituto Superiore di Sanità | Alcol, epidemiologia e monitoraggio 2020</a>. <i>Consultato il 10/07/2023</i><br/>
+                <a href="https://www.epicentro.iss.it/alcol/alcol_ebp">Istituto Superiore di Sanità | Alcol, guida, sicurezza e salute</a>. <i>Consultato il 10/07/2023</i><br/>
+                <a href = "https://www.epicentro.iss.it/alcol_fetale/consumi-alcolici-donne">Istituto Superiore di Sanità | Consumo alcolici tra la popolazione femminile</a>. <i>Consultato il 22/07/2023</i><br/>
+                <a href="https://www.epicentro.iss.it/ben/2021/3/fumo-alcol-adolescenti-hbsc">Istituto Superiore di Sanità | Fumo e alcol tra gli adolescenti</a>. <i>Consultato il 10/07/2023</i><br/>
+                <a href= "https://www.epicentro.iss.it/stradale/#:~:text=La%20grande%20maggioranza%20degli%20incidenti,di%20alcol%20e%20sostanze%20stupefacenti">Istituto Superiore di Sanità | Incidenti stradali</a>. <i>Consultato il 22/07/2023</i><br/>
+                <a href="https://www.epicentro.iss.it/piano_prevenzione/obesita">Istituto Superiore di Sanità | Sorveglianza e prevenzione dell'obesità</a>. <i>Consultato il 10/07/2023</i><br/>
+                <a href = "https://www.salute.gov.it/portale/alcol/dettaglioNotizieAlcol.jsp?lingua=italiano&menu=notizie&p=dalministero&id=5478">Ministero della Salute | Alchol Prevention Day</a>. <i>Consultato il 10/07/2023</i>. </br>
+                <a href = "https://www.salute.gov.it/portale/donna/dettaglioContenutiDonna.jsp?lingua=italiano&id=2350&area=Salute+donna&menu=prevenzione">Ministero della Salute | Salute della donna</a>. <i>Consultato il 22/07/2023</i><br/>
+                <a href="https://www.politicheantidroga.gov.it/it/attivita/attivita-e-progetti/le-pubblicazioni/cervello-mente-e-droghe/ ">Politiche antidroga.</a><i> Consultato il 10/07/2023</i>.
+                
+            </p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

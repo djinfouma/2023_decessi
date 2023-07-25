@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html lang="IT">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>L'Italia nel tempo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+	<script src="./script.js"></script>
+</head>
+
+<body>
+    <section>
+        <ul id="navbar"> 
+            <li class="navelement"> <a href="./sito.html">Dati e metodologia</a></li>
+            <li class="navelement"> <a href= "./italia.html">La situazione in Italia</a></li>
+            <li class="navelement"> <a href="./europa.html">Italia ed Europa a confronto</a></li>
+            <li class="navelement"> <a href="./nel_tempo.html" class="activeS">L'Italia nel tempo</a></li>
+            <li class="navelement"> <a href="#footer">About</a></li>
+        </ul>
+        </section>
+    
+        <div class="mobile-container">
+            <div class="topnav">
+                <a href="#" class="active">L'Italia nel tempo</a>
+                <div id="myLinks">
+                    <a href="./sito.html">Dati e metodologia</a>
+                    <a href="./italia.html">La situazione in Italia</a>
+                    <a href="./europa.html">Italia ed Europa a confronto</a>
+                    <a href="#footer">About</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+
+        <header class = "headerT">
+            <div>
+            <h1>L'Italia nel tempo</h1>
+            <p>Come sono cambiate nel corso degli anni le cause di decesso in Italia? Quali fattori hanno visto mutamenti e quali sono rimasti invariati?</p>
+            </div>
+            <button class = "buttonN" onclick="scrollToSection('#cause_decessi')">Esplora l'indagine<span class="arrow">&#9660;</span></button>
+            <img src = ""></img>
+        </header>
+
+        <section id = "cause_decessi">
+            <h2>Le cause principali dei decessi tra i giovani</h2>
+            <p>Tra il 2015 e il 2020 le cause principali di decessi tra i giovani sono sempre gli <b>accidenti di trasporto</b>, ma con un <b>calo</b> del 37%: si passa da 933 morti a 586.
+                <br/>Al secondo e terzo posto si collocano in modo differente negli anni i tumori e i suicidi.
+                Seguono malattie del sistema nervoso, malattie del cuore e leucemia. </p>
+           <div>
+            <div id="vis2015"></div>
+                <script>
+                (function(vegaEmbed) {
+                    var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"grid": false, "labelFontSize": 12, "titleFontSize": 14}, "facet": {"spacing": 10}, "title": {"fontSize": 16}}, "data": {"name": "data-230734678c279fa7512eaf438294830f"}, "mark": {"type": "bar"}, "encoding": {"color": {"condition": {"test": "(datum.DescrizioneCausa === 'Accidenti di trasporto')", "value": "#206792"}, "value": "lightgrey"}, "tooltip": [{"field": "DescrizioneCausa", "title": "Causa", "type": "nominal"}, {"field": "Decessi 2015", "title": "Totale decessi 2015", "type": "quantitative"}], "x": {"axis": {"labelAngle": 0}, "field": "DescrizioneCausa", "sort": "-y", "title": "", "type": "nominal"}, "y": {"field": "Decessi 2015", "title": "", "type": "quantitative"}}, "height": 380, "title": "Cause principali dei decessi nel 2015", "width": 900, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-230734678c279fa7512eaf438294830f": [{"DescrizioneCausa": "Accidenti di trasporto", "Decessi 2015": 933}, {"DescrizioneCausa": "Suicidio e autolesione", "Decessi 2015": 530}, {"DescrizioneCausa": "Tumori (tutti i tipi)", "Decessi 2015": 493}, {"DescrizioneCausa": "Malattie sistema nervoso", "Decessi 2015": 201}, {"DescrizioneCausa": "Altre malattie del cuore", "Decessi 2015": 144}, {"DescrizioneCausa": "Leucemia", "Decessi 2015": 128}]}};
+                    var embedOpt = {"mode": "vega-lite"};
+            
+                    function showError(el, error){
+                        el.innerHTML = ('<div style="color:red;">'
+                                        + '<p>JavaScript Error: ' + error.message + '</p>'
+                                        + "<p>This usually means there's a typo in your chart specification. "
+                                        + "See the javascript console for the full traceback.</p>"
+                                        + '</div>');
+                        throw error;
+                    }
+                    const el = document.getElementById('vis');
+                    vegaEmbed("#vis2015", spec, embedOpt)
+                    .catch(error => showError(el, error));
+                })(vegaEmbed);
+                </script>
+
+                <div id="vis2020"></div>
+                <script>
+                (function(vegaEmbed) {
+                    var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"grid": false, "labelFontSize": 12, "titleFontSize": 14}, "facet": {"spacing": 10}, "title": {"fontSize": 16}}, "data": {"name": "data-f95773f908a4bf914cfd3b7d94097e0b"}, "mark": {"type": "bar"}, "encoding": {"color": {"condition": {"test": "(datum.DescrizioneCausa === 'Accidenti di trasporto')", "value": "#206792"}, "value": "lightgrey"}, "tooltip": [{"field": "DescrizioneCausa", "title": "Causa", "type": "nominal"}, {"field": "Decessi 2020", "title": "Totale decessi 2020", "type": "quantitative"}], "x": {"axis": {"labelAngle": 0}, "field": "DescrizioneCausa", "sort": "-y", "title": "", "type": "nominal"}, "y": {"field": "Decessi 2020", "title": "", "type": "quantitative"}}, "height": 380, "title": "Cause principali dei decessi nel 2020", "width": 900, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-f95773f908a4bf914cfd3b7d94097e0b": [{"DescrizioneCausa": "Accidenti di trasporto", "Decessi 2020": 586}, {"DescrizioneCausa": "Altre malattie del cuore", "Decessi 2020": 115}, {"DescrizioneCausa": "Leucemia", "Decessi 2020": 90}, {"DescrizioneCausa": "Malattie sistema nervoso", "Decessi 2020": 185}, {"DescrizioneCausa": "Suicidio e autolesione", "Decessi 2020": 465}, {"DescrizioneCausa": "Tumori (tutti i tipi)", "Decessi 2020": 502}]}};
+                    var embedOpt = {"mode": "vega-lite"};
+
+                    function showError(el, error){
+                        el.innerHTML = ('<div style="color:red;">'
+                                        + '<p>JavaScript Error: ' + error.message + '</p>'
+                                        + "<p>This usually means there's a typo in your chart specification. "
+                                        + "See the javascript console for the full traceback.</p>"
+                                        + '</div>');
+                        throw error;
+                    }
+                    const el = document.getElementById('vis');
+                    vegaEmbed("#vis2020", spec, embedOpt)
+                    .catch(error => showError(el, error));
+                })(vegaEmbed);
+                </script>  
+                
+           </div>  
+        </section>
+
+        <section id = "incidenti_stradali">
+            <h2>Gli incidenti stradali tra il 2015 e 2020</h2>
+            <div class="grid-container1">
+                <div class = "grid-item1"><img src = "./grafici/incidenti1.svg" style = "width:90%;"/></div>
+                <p class="grid-item1">Dal 2015 al 2020 si assiste in Italia ad un <b>decremento</b> delle morti causate da incidenti stradali.
+                <br></br>In particolar modo il valore minimo si registra nel <b>2020</b>: nel contesto della crisi sanitaria ed economica esplosa con la pandemia di <b>Covid-19</b>, la mobilità e l’incidentalità stradale hanno subito cambiamenti radicali.
+                <br/>I periodi di lockdown imposti dai decreti governativi per contenere la diffusione dei contagi hanno determinato il blocco quasi totale della mobilità e della circolazione, influendo sull’incidentalità stradale.
+                </p>
+            </div>
+        </section>
+
+
+        <section id = "sez1">
+            <div id = "abuso_alcol">
+            <h2>L'abuso di alcool e le morti tra il 2015 e il 2020</h2>
+            <div class="grid-container2" style = "margin-top: 4%;">
+                <p class="grid-item2">Anche le morti dovute all'abuso di alcol hanno subito una netta <b>diminuzione</b> tra il 2015 e il 2020. 
+                <br/>Entrambi i dati sono dunque in calo, ricordando che tra essi vi è una stretta relazione: oltre il 25% degli incidenti stradali sono attribuibili all'alcol.
+                <br></br>Allo stesso tempo però, la consumazione di vino e birra nei giovani rimane più o meno <b>stabile</b> tra il 2021 e il 2022.</p>
+                <div class = "grid-item2"><img src = "./grafici/abusoalcol.svg"/></div>
+                <div class = "grid-item2"><img src = "./grafici/consumo_alcol.svg"/></div>
+            </div>
+            </div>
+        </section>
+
+        <section id = "dipendenza_droghe">
+            <h2>La dipendenza da droghe</h2>
+            <div class="grid-container3">
+                <div class = "grid-item3"><img src ="./grafici/droghe.svg"/></div>
+                <p class="grid-item3">Tra il 2015 e il 2020 le morti tra i giovani causate da dipendenze da droghe hanno subito un andamento altanelante, con momenti di crescita e di decrescita, rimanendo però in un range stabile.
+                    <br/><br/>Secondo quanto afferma sempre l'ISTAT, in particolare, negli ultimi anni la percentuale di giovani dai 15 ai 24 anni che causano incidenti stradali sotto l'effetto di stupefacenti è pari al <b>27%</b> circa.
+                    <br/><br/>Scendendo nel dettaglio, la fascia d'età per cui si registra il livello più alto di incidenti provocati sotto l'effetto di droghe è quella compresa tra i 20 e i 24 anni, per la quale <b>il valore è passato dallo 0.8 del 2001 all'1.7 nel 2019 (per 100 incidenti)</b>.
+                </p>
+            </div>
+        </section>
+    
+
+        <footer id="footer" class="grid-container">
+            <div class = "grid-item">
+                <p>Data Journalism, Università di Pisa<br> 
+                Laurea Magistrale in Informatica Umanistica<br>
+                Anno Accademico 2022/2023<br>
+                <br>Sofia Capone<br>Arianna Di Serio
+                </p>
+            </div>
+            <div class= "grid-item">
+                <h3>Fonti</h3>
+                <p>
+                    <a href="https://m4.ti.ch/fileadmin/DECS/DS/Rivista_scuola_ticinese/ST_n.274/ST_274_Gianinazzi_Quaglia_Inderwildi_Bonivento_Lo_stress.pdf">Gianinazzi, Andrea. Quaglia, Jacqueline. Inderwildi Bonivento, Laura. <i>Lo stress: un fattore di rischio tra i giovani</i></a><br/>
+                    <a href="https://www.humanitas.it/news/sintomi-dello-stress/#:~:text=Uno%20stress%20intenso%2C%20duraturo%20o,sintomi%20o%20patologie%20gi%C3%A0%20presenti">Humanitas | Sintomi dello stress</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href="https://www.humanitas.it/news/sonno-perche-e-importante-dormire-bene/#:~:text=I%20disturbi%20del%20sonno%2C%20infatti,problematiche%20di%20salute%20pi%C3%B9%20severe">Humanitas | Sonno: perché è importante dormire bene</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href="https://www.istat.it/">ISTAT</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href="https://www.epicentro.iss.it/alcol/epidemiologia-monitoraggio-2020">Istituto Superiore di Sanità | Alcol, epidemiologia e monitoraggio 2020</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href="https://www.epicentro.iss.it/alcol/alcol_ebp">Istituto Superiore di Sanità | Alcol, guida, sicurezza e salute</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href = "https://www.epicentro.iss.it/alcol_fetale/consumi-alcolici-donne">Istituto Superiore di Sanità | Consumo alcolici tra la popolazione femminile</a>. <i>Consultato il 22/07/2023</i><br/>
+                    <a href="https://www.epicentro.iss.it/ben/2021/3/fumo-alcol-adolescenti-hbsc">Istituto Superiore di Sanità | Fumo e alcol tra gli adolescenti</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href= "https://www.epicentro.iss.it/stradale/#:~:text=La%20grande%20maggioranza%20degli%20incidenti,di%20alcol%20e%20sostanze%20stupefacenti">Istituto Superiore di Sanità | Incidenti stradali</a>. <i>Consultato il 22/07/2023</i><br/>
+                    <a href="https://www.epicentro.iss.it/piano_prevenzione/obesita">Istituto Superiore di Sanità | Sorveglianza e prevenzione dell'obesità</a>. <i>Consultato il 10/07/2023</i><br/>
+                    <a href = "https://www.salute.gov.it/portale/alcol/dettaglioNotizieAlcol.jsp?lingua=italiano&menu=notizie&p=dalministero&id=5478">Ministero della Salute | Alchol Prevention Day</a>. <i>Consultato il 10/07/2023</i>. </br>
+                    <a href = "https://www.salute.gov.it/portale/donna/dettaglioContenutiDonna.jsp?lingua=italiano&id=2350&area=Salute+donna&menu=prevenzione">Ministero della Salute | Salute della donna</a>. <i>Consultato il 22/07/2023</i><br/>
+                    <a href="https://www.politicheantidroga.gov.it/it/attivita/attivita-e-progetti/le-pubblicazioni/cervello-mente-e-droghe/ ">Politiche antidroga.</a><i> Consultato il 10/07/2023</i>.
+                    
+                </p>
+            </div>
+        </footer>
+</body>
+</html>
